@@ -13,6 +13,7 @@
           <b-col sm="12"><textarea placeholder="Message" rows="6"></textarea></b-col>
         </b-row>
       </b-container>
+      <button class="[ button_form ]">Send</button>
     </form>
 
   </div>
