@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>hei</h2>
+    <h2>hallo</h2>
   </div>
 </template>
 
@@ -9,9 +9,9 @@
 
 
 export default {
-  name: 'home',
+  name: 'projects',
   components: {
-  
+
   }
 }
 </script>
