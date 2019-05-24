@@ -23,20 +23,38 @@ $subheading-4-mobile: 14px;
   text-align: center;
   margin-top: 2%;
   margin-bottom: 5%;
+  &_font{
+    font-family: $text-font;
+    color: $primary-white;
+    font-size: $subheading-1-mobile;
+    &-light{
+      font-family: 'Museo sans';
+      font-weight: 100;
+      font-size: $subheading-3-mobile;
+      color: $primary-white;
+    }
+  }
 }
 
-.title_font{
-  font-family: $text-font;
-  color: $primary-white;
-  font-size: $subheading-1-mobile;
+
+
+.titleBlack{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -40%;
+  text-align: center;
+  &_font{
+    @extend .title_font ;
+    color: $primary-black ;
+    &-light{
+      @extend .title_font-light ;
+      color: $primary-black ;
+    }
+  }
 }
 
-.title_font-light{
-  font-family: 'Museo sans';
-  font-weight: 100;
-  font-size: $subheading-3-mobile;
-  color: $primary-white;
-}
+
 
 @media screen and (min-width: 700px){
   .title_font{

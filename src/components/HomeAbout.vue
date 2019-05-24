@@ -1,9 +1,9 @@
 <template>
   <div class="[ wrapper ]">
 
-      <div class="[ headline ]">
-        <h1 class="[ headline_one ]">I'm Markus Eldevik</h1>
-        <h2 class="[ headline_two ]">ABOUT ME</h2>
+      <div class="[ title ]">
+        <h1 class="[ title_font ]">I'm Markus Eldevik</h1>
+        <h2 class="[ title_font-light ]">ABOUT ME</h2>
       </div>
 
       <b-container fluid class="[ about ]">
@@ -60,6 +60,9 @@
 </template>
 
 <script>
+export default {
+  name: 'HomeAbout'
+}
 </script>
 
 
@@ -67,20 +70,7 @@
 @import '@/styles/main.scss';
 
 
-.wrapper{
-  margin-left: 5%;
-  margin-right: 5%;
-}
 
-.headline{
-    @extend .title ;
-  &_one{
-    @extend .title_font ;
-  }
-  &_two{
-    @extend .title_font-light ;
-  }
-}
 
 .about{
   &_text{

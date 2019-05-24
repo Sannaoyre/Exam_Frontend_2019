@@ -4,6 +4,7 @@
     <HomeAbout></HomeAbout>
     <HomeIcons></HomeIcons>
     <HomeTimeline></HomeTimeline>
+    <HomeForm></HomeForm>
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import HomeHeader from '@/components/HomeHeader.vue';
 import HomeAbout from '@/components/HomeAbout.vue';
 import HomeIcons from '@/components/HomeIcons.vue';
 import HomeTimeline from '@/components/HomeTimeline.vue';
+import HomeForm from '@/components/HomeForm.vue';
 
 
 export default {
@@ -21,7 +23,8 @@ export default {
     HomeHeader,
     HomeAbout,
     HomeIcons,
-    HomeTimeline
+    HomeTimeline,
+    HomeForm
 
   }
 }

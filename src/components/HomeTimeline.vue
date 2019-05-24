@@ -1,9 +1,8 @@
 <template>
-  <div class="[ wrapper ]">
-
-    <div class="[ headline ]">
-      <h1 class="[ headline_one ]">View my timeline</h1>
-      <h2 class="[ headline_two ]">TIMELINE</h2>
+  <div class="[ timelineContainer ]">
+    <div class="[ title ]">
+      <h1 class="[ title_font ]">My experience</h1>
+      <h2 class="[ title_font-light ]">TIMELINE</h2>
     </div>
 
     <b-container fluid>
@@ -19,14 +18,12 @@
               </b-col>
         </b-row>
     </b-container>
-
-
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Timeline',
+  name: 'HomeTimeline',
   data () {
     return {
       timeline: [
@@ -46,21 +43,11 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
 
-.wrapper{
-  margin-left: 5%;
-  margin-right: 5%;
+.timelineContainer{
   margin-top: 10%;
 }
 
-.headline{
-    @extend .title ;
-  &_one{
-    @extend .title_font ;
-  }
-  &_two{
-    @extend .title_font-light ;
-  }
-}
+
 .timeline{
     color: $primary-white;
     font-family: $text-font;
@@ -101,6 +88,14 @@ export default {
   height: 150%;
   background: $primary-orange;
   z-index: -1;
+}
+
+.timeline:nth-child(5) {
+  @extend .gradientBoxReverse ;
+}
+
+.timeline_cicle:before:nth-child(5){
+  display: none;
 }
 
 

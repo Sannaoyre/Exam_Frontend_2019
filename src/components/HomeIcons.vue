@@ -64,18 +64,15 @@
 </template>
 
 <script>
-
+export default {
+  name: 'HomeIcons'
+}
 </script>
 
 
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
 
-
-.wrapper{
-  margin-left: 5%;
-  margin-right: 5%;
-}
 
 .icons{
   margin-top: 5%;

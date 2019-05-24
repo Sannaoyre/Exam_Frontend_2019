@@ -1,0 +1,14 @@
+.gradientBox{
+   background-image: linear-gradient(to bottom right,#f26622 50%,  black 50%);
+   height: 500px;
+}
+
+.gradientBoxReverse{
+   background-image: linear-gradient(to bottom right, black 50%, #f26622 50%);
+   height: 500px;
+}
+
+.wrapper{
+  margin-left: 5%;
+  margin-right: 5%;
+}
