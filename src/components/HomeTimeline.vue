@@ -1,20 +1,26 @@
 <template>
-  <div>
-    <b-container fluid>
-        <b-row v-for="time in timeline" :key="time" class="[ timeline ]">
-              <b-col sm="6" md="5" lg="5">
-                  <div v-text="time.circle " class="[ timeline_cicle ]"></div>
-                  <div class="[ timeline_line ]"></div>
+  <div class="[ wrapper ]">
 
+    <div class="[ headline ]">
+      <h1 class="[ headline_one ]">View my timeline</h1>
+      <h2 class="[ headline_two ]">TIMELINE</h2>
+    </div>
+
+    <b-container fluid>
+        <b-row  v-for="time in timeline" :key="time" class="[ timeline ]">
+              <b-col cols="4" md="5" lg="5">
+                  <div v-text="time.circle " class="[ timeline_cicle ]"></div>
 
               </b-col>
-              <b-col sm="6" md="7" lg="7">
-                <h2 v-text="time.year" class="[ timeline_year ]"></h2>
-                <p v-text="time.title" class="[ timeline_title ]"></p>
-                <p v-text="time.description" class="[ timeline_description ]"></p>
+              <b-col cols="8" md="7" lg="7">
+                <h2 v-text="time.year" class="[ timeline_year ]" v-scroll-reveal.reset="{ delay: 250 }"></h2>
+                <p v-text="time.title" class="[ timeline_title ]" v-scroll-reveal.reset="{ delay: 500 }"></p>
+                <p v-text="time.description" class="[ timeline_description ]" v-scroll-reveal.reset="{ delay: 700 }"></p>
               </b-col>
         </b-row>
     </b-container>
+
+
 </div>
 </template>
 
@@ -24,14 +30,14 @@ export default {
   data () {
     return {
       timeline: [
-        { title: 'Film editor', year: '2017-today', description: 'lorem ipsum dolor sit amet', circle: '', line: ''},
-        { title: 'Film student', year: '2015-2017', description: 'lorem ipsum dolor sit amet', circle: '', line: ''},
-        { title: 'Diamond Award', year: '2017', description: 'lorem ipsum dolor sit amet', circle: '', line: ''},
-        { title: 'Military', year: '2014-2015', description: 'lorem ipsum dolor sit amet', circle: '', line: ''},
-
+        { title: 'Film Editor', year: '2018-present', description: 'Work freelance as Film Editor', circle: ''},
+        { title: 'Award', year: '2018', description: 'Diamond Award for best film', circle: '', line: ''},
+        { title: 'Student', year: '2016-2018', description: 'Noroff Institute, Film Editing Course', circle: ''},
+        { title: 'Military', year: '2015-2016', description: "His Majesty the King's Guard ", circle: ''},
+        { title: 'Student', year: '2012-2015', description: 'Studied general studies at Høyanger High School', circle: ''},
       ]
     }
-  },
+  }
 }
 
 
@@ -40,28 +46,41 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
 
+.wrapper{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10%;
+}
 
+.headline{
+    @extend .title ;
+  &_one{
+    @extend .title_font ;
+  }
+  &_two{
+    @extend .title_font-light ;
+  }
+}
 .timeline{
     color: $primary-white;
+    font-family: $text-font;
+    padding-bottom: 20%;
+
+
   &_year{
     @extend .font_light ;
-    font-size: $subheading-1;
+    font-size: $subheading-1-mobile;
     margin-top: 2%;
   }
   &_title{
-    font-size: $subheading-4;
-  }
-  &_description{
+    @extend .font_light ;
+    font-size: $subheading-2-mobile;
 
   }
-  &_line{
-        height: 80%;
-        border-right: 3px solid $primary-orange ;
-        float: right;
-        margin-right: -2.8%;
-        border-radius: 3em;
-        margin-top: 10%;
-      }
+  &_description{
+    @extend .font_light ;
+    font-size: $subheading-4-mobile;
+  }
   &_cicle{
         width: 30px;
         height: 30px;
@@ -71,7 +90,65 @@ export default {
         margin-bottom: 30%;
         margin-top: 5%;
         border: 5px solid $primary-orange;
+        text-align: center;
       }
 }
+
+.timeline_cicle::before{
+  content: '';
+  position: absolute;
+  width: 0.2em;
+  height: 150%;
+  background: $primary-orange;
+  z-index: -1;
+}
+
+
+
+@media screen and (min-width: 700px){
+  .timeline{
+      padding-bottom: 5%;
+
+    &_year{
+      font-size: $subheading-1-mobile;
+      margin-top: 2%;
+    }
+    &_title{
+      font-size: $subheading-2-mobile;
+    }
+    &_description{
+      font-size: $subheading-4-mobile;
+    }
+    &_cicle{
+          margin-bottom: 30%;
+          margin-top: 5%;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 900px){
+  .timeline{
+      padding-bottom: 5%;
+
+    &_year{
+      font-size: $subheading-1;
+      margin-top: 2%;
+    }
+    &_title{
+      font-size: $subheading-2;
+    }
+    &_description{
+      font-size: $subheading-4;
+    }
+    &_cicle{
+          margin-bottom: 10%;
+          margin-top: 5%;
+        }
+  }
+}
+
+
 
 </style>

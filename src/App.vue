@@ -10,6 +10,6 @@
 
 <style lang="scss">
 body{
-  background-color: black;
+  background-color: black !important;
 }
 </style>

@@ -73,22 +73,16 @@
 }
 
 .headline{
-  text-align: center;
-  margin-top: 2%;
+    @extend .title ;
   &_one{
-    color: $primary-white;
-    font-family: $title-font;
-    font-size: $subheading-1-mobile;
+    @extend .title_font ;
   }
   &_two{
-    color: $primary-white;
-    font-size: $subheading-3-mobile;
-    @extend .font_light ;
+    @extend .title_font-light ;
   }
 }
 
 .about{
-  margin-top: 5%;
   &_text{
     color: $primary-white;
     font-size: $subheading-4-mobile;
@@ -148,18 +142,6 @@
 
 
 @media screen and (min-width: 700px){
-  .headline{
-    margin-top: 2%;
-    &_one{
-      font-size: $subheading-1;
-    }
-    &_two{
-      color: $primary-white;
-      font-family: $title-font;
-      font-size: $subheading-3;
-    }
-  }
-
   .about{
     &_text{
       font-size: $subheading-4-mobile;
