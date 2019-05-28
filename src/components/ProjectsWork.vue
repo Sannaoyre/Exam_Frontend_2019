@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div><br><br><br><br>
     <div class="gradient2BoxReverse">
 
         <tabs id="test">
@@ -11,9 +11,6 @@
             <h1>Here is the graphics content</h1>
           </tab>
         </tabs>
-
-
-
     </div>
     <div  class="gradient2Box">
     </div>
