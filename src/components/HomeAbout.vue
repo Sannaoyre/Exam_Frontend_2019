@@ -1,12 +1,12 @@
 <template>
-  <div class="[ wrapper ]">
+  <div class="[ wrapper ]" id="about">
 
       <div class="[ title ]">
         <h1 class="[ title_font ]">I'm Markus Eldevik</h1>
         <h2 class="[ title_font-light ]">ABOUT ME</h2>
       </div>
 
-      <b-container fluid class="[ about ]">
+      <b-container fluid class="[ about ]" >
           <b-row>
                 <b-col sm="12" md="2" lg="4">
               IMG

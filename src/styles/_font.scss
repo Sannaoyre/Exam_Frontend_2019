@@ -42,13 +42,16 @@ $subheading-4-mobile: 14px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: -40%;
+  top: -35%;
   text-align: center;
   &_font{
-    @extend .title_font ;
+    font-family: $text-font;
+    font-size: $subheading-1-mobile;
     color: $primary-black ;
     &-light{
-      @extend .title_font-light ;
+      font-family: 'Museo sans';
+      font-weight: 100;
+      font-size: $subheading-3-mobile;
       color: $primary-black ;
     }
   }
@@ -59,9 +62,20 @@ $subheading-4-mobile: 14px;
 @media screen and (min-width: 700px){
   .title_font{
     font-size: $subheading-1;
+    &-light{
+      font-size: $subheading-3;
+    }
   }
-  .title_font-light{
-  font-size: $subheading-3;
+
+  .titleBlack{
+    &_font{
+      font-size: $subheading-1;
+      &-light{
+        font-size: $subheading-3;
+      }
+    }
   }
+
+
 
 }

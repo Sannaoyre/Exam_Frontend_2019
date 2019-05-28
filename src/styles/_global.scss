@@ -1,14 +1,44 @@
 .gradientBox{
    background-image: linear-gradient(to bottom right,#f26622 50%,  black 50%);
-   height: 500px;
+   height: 400px;
 }
 
 .gradientBoxReverse{
    background-image: linear-gradient(to bottom right, black 50%, #f26622 50%);
-   height: 500px;
+   height: 400px;
 }
 
 .wrapper{
+  margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 20%;
+}
+
+p{
+  margin: 0;
+  margin-bottom: 0rem;
+}
+
+@media screen and (min-width: 700px){
+  .wrapper{
+    margin-bottom: 10%;
+  }
+  .gradientBox{
+     height: 500px;
+  }
+
+  .gradientBoxReverse{
+     height: 500px;
+  }
+}
+
+
+@media screen and (min-width: 900px){
+  .wrapper{
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+  }
 }

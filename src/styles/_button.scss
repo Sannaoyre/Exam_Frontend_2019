@@ -5,10 +5,20 @@
   margin-right: auto;
   position: relative;
   border-radius: 100%;
+  border: 2px solid $primary-orange;
+  color: $primary-orange;
   display: -webkit-flex;
-  color: $primary-black;
   justify-content: center;
-  background-color: $primary-orange;
+  background-color: transparent;
+  &:active{
+    background-color: $primary-orange;
+    color: $primary-black;
+    outline: none !important;
+  }
+  &-text{
+    color: $primary-orange;
+    font-family: $text-font;
+  }
 }
 
 .button_dropdown{
@@ -17,7 +27,23 @@
 
 @media screen and (min-width: 700px){
   .button_form{
-
+    width: 100px;
+    height: 30px;
+    border-radius: 0.1em;
+    float: right;
+    margin: 10px;
+    &:hover{
+      background-color: $primary-orange;
+      color: $primary-black;
+    }
+    &:active{
+      background-color: rgba(242, 102, 34, 0.8);
+      outline: none !important;
+       border: 1px solid rgba(242, 102, 34, 0.8);
+    }
+    &:visited{
+      outline: none !important;
+    }
   }
 
 }
