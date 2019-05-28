@@ -8,6 +8,15 @@
    height: 400px;
 }
 
+.gradient2Box{
+  background-image: linear-gradient(to bottom left,#f26622 50%,  black 50%);
+  height: 600px;
+}
+.gradient2BoxReverse{
+  background-image: linear-gradient(to bottom left, black 50%, #f26622 50%,);
+  height: 600px;
+}
+
 .wrapper{
   margin-top: 5%;
   margin-left: 5%;

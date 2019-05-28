@@ -1,0 +1,25 @@
+ul{
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid $primary-white;
+  margin-left: 8%;
+  margin-right: 8%;
+padding-inline-start: 0px;
+
+  li{
+    list-style-type: none;
+    color: $primary-white;
+    font-size: $subheading-2;
+    text-align: center;
+      width: 10%;
+
+  }
+
+}
+
+.is-active{
+  width: 10%;
+  border-bottom: 3px solid $primary-orange;
+  color: $primary-orange;
+  margin-bottom: -3px;
+}
