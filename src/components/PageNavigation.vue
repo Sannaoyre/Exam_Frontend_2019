@@ -1,12 +1,16 @@
 <template>
   <div>
       <nav id="navbar">
-        <router-link @click.native="scrollFix(routes.page)"
-                     v-for="routes in links"
-                     v-bind:key="routes.id"
-                    :to="`${routes.page}`">{{routes.text}}</router-link>
+          <router-link
+                       @click.native.prevent="scrollFix(routes.page)"
+                       v-for="routes in links"
+                       v-bind:key="routes.id"
+                      :to="`${routes.page}`">{{routes.text}}
+         </router-link>
+
       </nav>
-    <!--  <router-link to="/#contact" @click.native="scrollFix(routes.page)">Contact</router-link>-->
+
+
   </div>
 </template>
 
@@ -45,7 +49,12 @@ export default {
     scrollFix: function(hashbang)
     {
       location.href = hashbang;
-    },
+
+
+    }
+  //  Scroll(){
+  //    document.querySelector(this.href).scrollIntoView({ behavior: 'smooth'})
+  //  }
 
   }
 }
