@@ -23,7 +23,7 @@ export default {
 
   computed: {
     href() {
-      return '#' + this.name;
+      return '#' + this.name.toLowerCase();
     }
   },
 

@@ -6,6 +6,8 @@
     <HomeIcons></HomeIcons>
     <HomeTimeline></HomeTimeline>
     <HomeForm></HomeForm>
+    <PageFooter></PageFooter>
+
   </div>
 </template>
 
@@ -16,7 +18,9 @@ import HomeAbout from '@/components/HomeAbout.vue';
 import HomeIcons from '@/components/HomeIcons.vue';
 import HomeTimeline from '@/components/HomeTimeline.vue';
 import HomeForm from '@/components/HomeForm.vue';
-import PageNavigation from '@/components/PageNavigation.vue'
+import PageNavigation from '@/components/PageNavigation.vue';
+import PageFooter from '@/components/PageFooter.vue';
+
 
 
 export default {
@@ -27,7 +31,8 @@ export default {
     HomeIcons,
     HomeTimeline,
     HomeForm,
-    PageNavigation
+    PageNavigation,
+    PageFooter
 
   }
 }

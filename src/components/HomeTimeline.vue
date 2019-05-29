@@ -6,7 +6,7 @@
     </div>
 
     <b-container fluid>
-        <b-row  v-for="time in timeline" :key="time" class="[ timeline ]">
+        <b-row  v-for="time in timeline"  class="[ timeline ]">
               <b-col cols="4" md="5" lg="5">
                   <div v-text="time.circle " class="[ timeline_cicle ]"></div>
 

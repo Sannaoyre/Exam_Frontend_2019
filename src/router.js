@@ -16,7 +16,26 @@ export default new Router({
       path: '/projects',
       name: 'projects',
       component: Projects
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: Home
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Home
+    },
+    {
+      path: '/films',
+      name: 'films',
+      component: Projects
+    },
+    {
+      path: '/graphics',
+      name: 'graphics',
+      component: Projects
     }
-
   ]
 })

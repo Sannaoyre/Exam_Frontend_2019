@@ -3,14 +3,16 @@
       <PageNavigation></PageNavigation>
       <ProjectsHeader></ProjectsHeader>
       <ProjectsWork></ProjectsWork>
+      <PageFooter></PageFooter>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import PageNavigation from '@/components/PageNavigation.vue'
-import ProjectsHeader from '@/components/ProjectsHeader.vue'
-import ProjectsWork from '@/components/ProjectsWork.vue'
+import PageNavigation from '@/components/PageNavigation.vue';
+import ProjectsHeader from '@/components/ProjectsHeader.vue';
+import ProjectsWork from '@/components/ProjectsWork.vue';
+import PageFooter from '@/components/PageFooter.vue';
 
 
 export default {
@@ -18,7 +20,8 @@ export default {
   components: {
     PageNavigation,
     ProjectsHeader,
-    ProjectsWork
+    ProjectsWork,
+    PageFooter
 
   }
 }
