@@ -21,7 +21,7 @@ $subheading-4-mobile: 14px;
 //////////Main titles//////////
 .title{
   text-align: center;
-  margin-top: 2%;
+  margin-top: 5%;
   margin-bottom: 5%;
   &_font{
     font-family: $text-font;
@@ -32,6 +32,7 @@ $subheading-4-mobile: 14px;
       font-weight: 100;
       font-size: $subheading-3-mobile;
       color: $primary-white;
+      text-align: center;
     }
   }
 }
@@ -57,7 +58,14 @@ $subheading-4-mobile: 14px;
   }
 }
 
-
+.film_title{
+  font-family: 'Museo sans';
+  font-weight: 100;
+  font-size: $subheading-2-mobile;
+  color: $primary-white;
+  text-align: center;
+  margin: 0px 0px 0px;
+}
 
 @media screen and (min-width: 700px){
   .title_font{
@@ -76,6 +84,13 @@ $subheading-4-mobile: 14px;
     }
   }
 
+  .film_title{
+    font-size: $subheading-4-mobile;
+  }
+}
 
-
+@media screen and (min-width: 900px){
+  .film_title{
+    font-size: $subheading-4;
+  }
 }

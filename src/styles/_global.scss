@@ -1,29 +1,37 @@
-.gradientBox{
-   background-image: linear-gradient(to bottom right,#f26622 50%,  black 50%);
-   height: 400px;
-}
-
-.gradientBoxReverse{
-   background-image: linear-gradient(to bottom right, black 50%, #f26622 50%);
-   height: 400px;
-}
-
-.gradient2Box{
-  background-image: linear-gradient(to bottom left,#f26622 50%,  black 50%);
-  height: 600px;
-}
-.gradient2BoxReverse{
-  background-image: linear-gradient(to bottom left, black 50%, #f26622 50%,);
-  height: 600px;
-
-}
-
 .wrapper{
   margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 20%;
 }
+
+.blackBox{
+  background-color: $primary-black;
+  height: 100px;
+}
+.gradientBox{
+   background-image: linear-gradient(to bottom right, $primary-black 50%,  $primary-black 50%);
+   height: 1000px;
+}
+
+.gradientBoxReverse{
+   background-image: linear-gradient(to bottom right, $primary-black 50%,  $primary-black 50%);
+   height: 1000px;
+}
+
+.gradient2Box{
+  background-image: linear-gradient(to bottom right, $primary-black 50%,  $primary-black 50%);
+  height: 1000px;
+  display: block;
+}
+.gradient2BoxReverse{
+  background-image: linear-gradient(to bottom right, $primary-black 50%,  $primary-black 50%);
+  height: 1000px;
+  display: block;
+}
+
+
+
 
 p{
   margin: 0;
@@ -34,13 +42,32 @@ p{
   .wrapper{
     margin-bottom: 10%;
   }
+  .blackBox{
+    background-color: $primary-black;
+    height: 100px;
+  }
   .gradientBox{
+     background-image: linear-gradient(to bottom right,#f26622 50%,  black 50%);
      height: 500px;
   }
 
   .gradientBoxReverse{
+     background-image: linear-gradient(to bottom right, black 50%, #f26622 50%);
      height: 500px;
   }
+  .gradient2Box{
+    background-image: linear-gradient(to bottom left,#f26622 50%,  black 50%);
+    height: 400px;
+    display: block;
+  }
+  .gradient2BoxReverse{
+    background-image: linear-gradient(to bottom left, black 50%, #f26622 50%,);
+    height: 400px;
+    display: block;
+  }
+
+
+
 }
 
 
@@ -50,5 +77,10 @@ p{
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
+  }
+
+  .blackBox{
+    background-color: $primary-black;
+    height: 100px;
   }
 }

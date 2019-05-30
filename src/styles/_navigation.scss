@@ -22,7 +22,7 @@ nav{
   background-color: $primary-black;
   color: $primary-white;
   border-bottom: 1px solid $primary-white;
-  &:hover{
+  a:hover{
       border-bottom: 2px solid $primary-white;
       text-decoration: none;
   }

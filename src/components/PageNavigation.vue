@@ -1,6 +1,6 @@
 <template>
   <div>
-      <nav id="navbar">
+      <nav id="navbar" v-on:scroll="handleScroll">
           <router-link
                        @click.native.prevent="scrollFix(routes.page)"
                        v-for="routes in links"
@@ -41,7 +41,8 @@ export default {
           text: 'Contact',
           page: '/#contact'
         }
-      ]
+      ],
+      scrolled: false
     }
   },
 
@@ -49,15 +50,24 @@ export default {
     scrollFix: function(hashbang)
     {
       location.href = hashbang;
+    },
+
+    handleScroll () {
+       console.log('scrolling');
+
 
 
     }
-  //  Scroll(){
-  //    document.querySelector(this.href).scrollIntoView({ behavior: 'smooth'})
-  //  }
-
-  }
+  },
+  created () {
+   window.addEventListener('scroll', this.handleScroll);
+ },
+ destroyed () {
+   window.removeEventListener('scroll', this.handleScroll);
+ }
 }
+
+
 
 
 </script>

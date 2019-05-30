@@ -5,7 +5,6 @@
 
 ul{
   padding: 0px 0px 0px 0px;
-  
 
 
   li{
@@ -25,6 +24,7 @@ ul{
 
     a{
       color: $primary-orange;
+      font-size: 12px;
       &:hover{
         text-decoration: none;
 
@@ -49,8 +49,6 @@ ul{
 @media screen and (min-width: 700px){
   ul{
     border-bottom: 3px solid $primary-white;
-    margin-left: 5%;
-    margin-right: 5%;
     display: flex;
     align-items: center;
     padding-inline-start: 0px;
@@ -61,22 +59,22 @@ ul{
       border-radius: 0%;
       background-color: transparent;
       color: $primary-white;
-      font-size: $subheading-2;
-      width: 10%;
+      width: 20%;
       border: none;
       display: block;
       margin: 0%;
       line-height: 1.5;
-      font-size: $subheading-3;
 
       a{
         color: $primary-white;
+        font-size: $subheading-4-mobile;
+
       }
     }
   }
 
   .is-active{
-    width: 10%;
+    width: 20%;
     border-bottom: 3px solid $primary-orange;
     color: $primary-orange;
     margin-bottom: -3px;
@@ -85,5 +83,11 @@ ul{
     a{
       color: $primary-orange;
     }
+  }
+}
+@media screen and (min-width: 900px){
+  ul li a{
+    font-size: $subheading-4;
+
   }
 }
