@@ -57,12 +57,12 @@ p{
   }
   .gradient2Box{
     background-image: linear-gradient(to bottom left,#f26622 50%,  black 50%);
-    height: 400px;
+    height: 300px;
     display: block;
   }
   .gradient2BoxReverse{
     background-image: linear-gradient(to bottom left, black 50%, #f26622 50%,);
-    height: 400px;
+    height: 300px;
     display: block;
   }
 
@@ -77,6 +77,16 @@ p{
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
+  }
+  .gradient2Box{
+    background-image: linear-gradient(to bottom left,#f26622 50%,  black 50%);
+    height: 500px;
+    display: block;
+  }
+  .gradient2BoxReverse{
+    background-image: linear-gradient(to bottom left, black 50%, #f26622 50%,);
+    height: 500px;
+    display: block;
   }
 
   .blackBox{

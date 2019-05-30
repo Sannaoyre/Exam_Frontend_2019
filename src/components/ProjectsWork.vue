@@ -1,6 +1,6 @@
 <template>
   <div><br><br>
-    <div class="gradient2BoxReverse">
+    <div class="blackBox">
 
       <tabs class="[ wrapper ]">
 
@@ -61,6 +61,7 @@
         </tabs>
       </div>
 
+    <div class="gradient2BoxReverse"></div>
     <div  class="gradient2Box"></div>
     <div  class="blackBox"></div>
 
@@ -78,7 +79,7 @@ export default {
     tab
   },
   methods: {
-    
+
   },
   data () {
     return {
@@ -121,7 +122,7 @@ iframe{
   height: 100%;
 }
 .film{
-  margin: 10% 0% 30% 0%;
+  margin: 10% 0% 50% 0%;
 }
 
 
