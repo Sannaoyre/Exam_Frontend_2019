@@ -1,3 +1,6 @@
+button:focus{
+  outline: none;
+}
 //////////Button for form on home page//////////
 .button_form{
   width: 100px;
@@ -26,14 +29,15 @@
 
 //////////Button for project page//////////
 .dropdownButton{
-  visibility: hidden;
   width: 100%;
   border: none;
   background-color: transparent;
+  border-bottom: 1px solid $primary-white;
 
-  &:hover{
+
+  &:hover .dropdownButton_title {
+    opacity: 0.6;
   }
-
   &_title{
     font-weight: 100;
     color: $primary-white;
@@ -52,24 +56,25 @@
 
 
 #dropdownText{
-  visibility: hidden;
+  position: absolute;
   font-weight: 100;
   text-align: left;
   color: $primary-white;
   font-family: $text-font;
   font-size: $subheading-4-mobile;
+
+
 }
 
-.dropdownButton:hover #dropdownMark{
+/*
+.dropdownButton:focus #dropdownMark{
   display: inline-block;
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
+*/
 
-.dropdownButton:hover #dropdownText{
-  visibility: visible;
-}
 
 
 @media screen and (min-width: 700px){
@@ -95,10 +100,4 @@
   }
 
 
-}
-
-@media screen and (min-width: 900px){
-  .dropdownButton{
-    visibility: visible;
-  }
 }

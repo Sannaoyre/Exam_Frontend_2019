@@ -4,20 +4,21 @@
 
       <tabs class="[ wrapper ]">
 
- <!--////////Tab for films////////-->
+ <!--////////Tab for travel videos////////-->
           <tab name="Travel videos" :selected="true">
               <b-container fluid>
                 <b-row>
                   <b-col class="[ film ]" v-for="film in films" sm="12" md="4" lg="4">
 
-                    <h2 v-text="film.title"  class="[ film_title ]"></h2>
+                    <h2 v-text="film.title"  class="[ film_title ]" ></h2>
                     <iframe :src="film.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle"></iframe>
-                    <button class="dropdownButton">
-                      <p class="dropdownButton_title">About this project
-                        <span class="dropdownButton_title-arrow" id="dropdownMark">V</span>
+                    <button v-on:click="film.show = !film.show" class="[ dropdownButton ]">
+                      <p class="[ dropdownButton_title ]">About this project
+                        <span class="[ dropdownButton_title-arrow ]" id="dropdownMark">V</span>
                       </p>
-                      <div id="dropdownText" v-text="film.description"></div>
+                      <transition name="fade"><p v-if="film.show" id="dropdownText" v-text="film.description"></p></transition>
                     </button>
+
 
                   </b-col>
                 </b-row>
@@ -33,12 +34,12 @@
 
                   <h2 v-text="musicvideo.title"  class="[ film_title ]"></h2>
                   <iframe :src="musicvideo.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle"></iframe>
-                  <button class="dropdownButton">
-                    <p class="dropdownButton_title">About this project
-                      <span class="dropdownButton_title-arrow" id="dropdownMark">V</span>
+                  <button v-on:click="musicvideo.show = !musicvideo.show"  class="[ dropdownButton ]">
+                    <p class="[ dropdownButton_title ]">About this project
+                      <span class="[ dropdownButton_title-arrow ]" id="dropdownMark">V</span>
                     </p>
-                    <div id="dropdownText" v-text="musicvideo.description"></div>
                   </button>
+                  <transition name="fade"><p v-if="musicvideo.show" id="dropdownText" v-text="musicvideo.description"></p></transition>
 
                 </b-col>
               </b-row>
@@ -76,18 +77,21 @@ export default {
     tabs,
     tab
   },
+  methods: {
+    
+  },
   data () {
     return {
       films: [
-        { title: 'Destination Stranda', src: 'https://player.vimeo.com/video/318919381', description: 'Editor. Made in 2018'},
-        { title: 'Destination Island', src: 'https://player.vimeo.com/video/290483803', description: 'Editor. Made in 2018'},
-        { title: 'Rovia Island 2018', src: 'https://player.vimeo.com/video/298231639', description: 'Editor. Made in 2018'},
-        { title: 'Fredløs', src: 'https://player.vimeo.com/video/318919381', description: 'Editor. Made in 2018'},
+        { title: 'Destination Stranda', src: 'https://player.vimeo.com/video/318919381', description: 'Editor. Made in 2018', show: false},
+        { title: 'Destination Island', src: 'https://player.vimeo.com/video/290483803', description: 'Editor. Made in 2018', show: false},
+        { title: 'Rovia Island 2018', src: 'https://player.vimeo.com/video/298231639', description: 'Editor. Made in 2018', show: false},
+        { title: 'Fredløs', src: 'https://player.vimeo.com/video/318919381', description: 'Editor. Made in 2018', show: false},
       ],
       musicvideos: [
-        { title: 'iEksil - Når Æ Dør', src: 'https://www.youtube.com/embed/a8fdHOBjU2Y?fbclid=IwAR1iKbGIxYn_zmhpR2ViwSNQc72lEtb9iV4caLGPdhLPr227hKnfBx2IHq0', description: 'Music Video. Editor and VFX. Made in 2018'},
-        { title: 'Baia Wolf - I Hate Boys/Girls', src: 'https://www.youtube.com/embed/xbor8hHgF8w?fbclid=IwAR1iKbGIxYn_zmhpR2ViwSNQc72lEtb9iV4caLGPdhLPr227hKnfBx2IHq0', description: ' Music Video. Editor. Made in 2018'},
-        { title: 'Resouza - Your Melody', src: 'https://www.youtube.com/embed/sf3JCmLbC54?fbclid=IwAR1iKbGIxYn_zmhpR2ViwSNQc72lEtb9iV4caLGPdhLPr227hKnfBx2IHq0', description: 'Music Video. Editor. Made in 2018'},
+        { title: 'iEksil - Når Æ Dør', src: 'https://www.youtube.com/embed/a8fdHOBjU2Y?fbclid=IwAR1iKbGIxYn_zmhpR2ViwSNQc72lEtb9iV4caLGPdhLPr227hKnfBx2IHq0', description: 'Music Video. Editor and VFX. Made in 2018', show: false},
+        { title: 'Baia Wolf - I Hate Boys/Girls', src: 'https://www.youtube.com/embed/xbor8hHgF8w?fbclid=IwAR1iKbGIxYn_zmhpR2ViwSNQc72lEtb9iV4caLGPdhLPr227hKnfBx2IHq0', description: ' Music Video. Editor. Made in 2018', show: false},
+        { title: 'Resouza - Your Melody', src: 'https://www.youtube.com/embed/sf3JCmLbC54?fbclid=IwAR1iKbGIxYn_zmhpR2ViwSNQc72lEtb9iV4caLGPdhLPr227hKnfBx2IHq0', description: 'Music Video. Editor. Made in 2018', show: false},
       ],
       shortfilms: [
         { title: '', scr: '', description: '' },
@@ -98,16 +102,19 @@ export default {
         { title: '', scr: '', description: '' },
         { title: '', scr: '', description: '' },
         { title: '', scr: '', description: '' },
-      ]
+      ],
+
     }
-
   }
-
 }
 </script>
 
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
+
+p{
+  margin-top: 2%;
+}
 
 iframe{
   width: 100%;
@@ -124,7 +131,7 @@ iframe{
   }
 
   .film{
-    margin: 5% 0% 0% 0%;
+    margin: 5% 0% 5% 0%;
   }
 
 }
