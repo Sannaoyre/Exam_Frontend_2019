@@ -3,9 +3,7 @@
 
       <div class="[ header_background ]">
           <div class="[ header_background-square ]">
-              <video autoplay muted loop>
-                  <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
-              </video>
+              <iframe src="https://player.vimeo.com/video/318919381?&autoplay=1" height="100px"frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle"></iframe>
           </div>
           <div class="header_background-text">
               <h2 id="firstText"><span id="firstText_bold">MY</span> PROJECTS</h2>
@@ -86,8 +84,11 @@ export default {
       color: $primary-orange;
     }
 
-    video {
-    min-height: 150%;
+    iframe {
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
     margin-top: 100px;
     position: absolute;
     margin-left: -100px;
@@ -107,6 +108,13 @@ export default {
         }
       }
     }
+
+    iframe {
+    width: 900px;
+    height: 700px;
+    margin: 0 auto;
+    display: block;
+  }
 
     #firstText{
       font-size: 38px;
@@ -134,6 +142,12 @@ export default {
       }
     }
   }
+  iframe {
+  height: 800px;
+  width: 1200px;
+  margin: 0 auto;
+  display: block;
+}
 
   #firstText{
     font-size: 40px;
@@ -169,6 +183,12 @@ export default {
     #thirdText{
       font-size: 28.5px;
     }
+
+    iframe {
+    width: 1500px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 

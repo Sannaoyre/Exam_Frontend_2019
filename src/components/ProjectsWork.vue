@@ -16,7 +16,7 @@
                       <p class="[ dropdownButton_title ]">About this project
                         <span class="[ dropdownButton_title-arrow ]" id="dropdownMark">V</span>
                       </p>
-                      <transition name="fade"><p v-if="film.show" id="dropdownText" v-text="film.description"></p></transition>
+                      <transition name="fade"><p v-if="film.show" v-on-click-outside="close" id="dropdownText" v-text="film.description"></p></transition>
                     </button>
 
 
@@ -71,16 +71,16 @@
 <script>
 import tabs from '@/components/ProjectsTabs.vue'
 import tab from '@/components/ProjectsTab.vue'
+import { mixin as onClickOutside } from 'vue-on-click-outside'
 
 export default {
   name: 'ProjectsWork',
+  mixins: [onClickOutside],
   components: {
     tabs,
     tab
   },
-  methods: {
 
-  },
   data () {
     return {
       films: [
@@ -106,8 +106,17 @@ export default {
       ],
 
     }
+    show: false
+  },
+  methods: {
+    open() {  this[film.show] = true },
+
+    close() { this[film.show] = false }
   }
 }
+
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -120,6 +129,8 @@ p{
 iframe{
   width: 100%;
   height: 100%;
+  margin: 0 auto;
+  display: block;
 }
 .film{
   margin: 10% 0% 50% 0%;

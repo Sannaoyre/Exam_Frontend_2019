@@ -12,6 +12,7 @@
     "bootstrap-vue": "^2.0.0-rc.20",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
+    "vue-on-click-outside": "^1.0.3",
     "vue-router": "^3.0.3",
     "vue-scroll-reveal": "^1.0.11"
   },

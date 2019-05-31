@@ -19,6 +19,9 @@ form{
         background-color: $primary-white;
         border: 1px solid $primary-white;
       }
+      &::placeholder{
+        color: #595959;
+      }
   }
   textarea{
     width: 100%;
@@ -33,6 +36,9 @@ form{
       outline: none !important;
       background-color: $primary-white;
       border: 1px solid $primary-white;
+    }
+    &::placeholder{
+      color: #595959;
     }
   }
 }
