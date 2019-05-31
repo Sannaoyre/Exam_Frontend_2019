@@ -24,6 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
+@import '@/styles/_iframeHeader.scss';
 
 .header{
   width: 100%;
@@ -84,14 +85,7 @@ export default {
       color: $primary-orange;
     }
 
-    iframe {
-    height: 800px;
-    width: 1200px;
-    margin-top: 100px;
-    position: absolute;
-    margin-left: -100px;
-    transform: rotate(-45deg);
-  }
+  
 
 @media screen and (min-width: 700px){
   .header{

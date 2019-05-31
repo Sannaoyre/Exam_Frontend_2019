@@ -13,7 +13,7 @@
           <b-col sm="12"><textarea placeholder="Message" rows="6"></textarea></b-col>
         </b-row>
       </b-container>
-      <button class="[ button_form ]"><p class="[ buttom_form-text ]">SEND</p></button>
+      <button class="[ button_form ]"><p>SEND</p></button>
     </form>
 
   </div>

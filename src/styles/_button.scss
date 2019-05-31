@@ -21,9 +21,9 @@ button:focus{
     background-color: $primary-orange;
   }
 
-  &-text{
-    color: $primary-orange;
+  p{
     font-family: $text-font;
+    font-size: $subheading-4;
   }
 }
 
@@ -38,18 +38,18 @@ button:focus{
   &:hover .dropdownButton_title {
     opacity: 0.6;
   }
+
   &_title{
     font-weight: 100;
     color: $primary-white;
     font-family: $text-font;
     text-transform: uppercase;
-    font-size: $subheading-3-mobile;
+    font-size: $subheading-2-mobile;
 
       &-arrow{
         font-weight: 400;
         font-family: $header-font;
-        &:hover{
-      }
+
     }
   }
 }
@@ -61,19 +61,12 @@ button:focus{
   text-align: left;
   color: $primary-white;
   font-family: $text-font;
-  font-size: $subheading-4-mobile;
+  font-size: $subheading-3-mobile;
 
 
 }
 
-/*
-.dropdownButton:focus #dropdownMark{
-  display: inline-block;
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
-*/
+
 
 
 
@@ -85,19 +78,45 @@ button:focus{
     float: right;
     margin: 10px;
     border-radius: 0.1em;
+
     &:hover{
       color: $primary-black;
       background-color: $primary-orange;
     }
+
     &:active{
       outline: none !important;
       background-color: rgba(242, 102, 34, 0.8);
       border: 1px solid rgba(242, 102, 34, 0.8);
     }
+
     &:visited{
       outline: none !important;
     }
   }
 
+  .dropdownButton{
+    &_title{
+      font-size: $subheading-3-mobile;
+    }
+  }
 
+  #dropdownText{
+    font-size: $subheading-3-mobile;
+  }
+}
+
+
+@media screen and (min-width: 900px){
+
+  .dropdownButton{
+
+    &_title{
+      font-size: $subheading-4;
+    }
+  }
+
+  #dropdownText{
+    font-size: $subheading-4;
+  }
 }

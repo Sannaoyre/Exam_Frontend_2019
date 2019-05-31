@@ -13,30 +13,32 @@ $subheading-2-mobile: 18px;
 $subheading-3-mobile: 16px;
 $subheading-4-mobile: 14px;
 
-.font_light{
-  font-family: 'Museo sans';
-  font-weight: 100;
-}
 
 //////////Main titles//////////
 .title{
-  text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
+  text-align: center;
+
   &_font{
-    font-family: $text-font;
     color: $primary-white;
+    font-family: $text-font;
     font-size: $subheading-1-mobile;
+
     &-light{
-      font-family: 'Museo sans';
       font-weight: 100;
-      font-size: $subheading-3-mobile;
-      color: $primary-white;
       text-align: center;
+      color: $primary-white;
+      font-family: 'Museo sans';
+      font-size: $subheading-3-mobile;
     }
   }
 }
 
+.font_light{
+  font-family: 'Museo sans';
+  font-weight: 100;
+}
 
 
 .titleBlack{
@@ -45,28 +47,32 @@ $subheading-4-mobile: 14px;
   position: relative;
   top: -35%;
   text-align: center;
+
   &_font{
+    color: $primary-white;
     font-family: $text-font;
     font-size: $subheading-1-mobile;
-    color: $primary-black ;
+
     &-light{
-      font-family: 'Museo sans';
       font-weight: 100;
+      color: $primary-white;
+      font-family: 'Museo sans';
       font-size: $subheading-3-mobile;
-      color: $primary-black ;
     }
   }
 }
 
+
 .film_title{
-  font-family: 'Museo sans';
   font-weight: 100;
-  font-size: $subheading-2-mobile;
-  color: $primary-white;
   text-align: center;
   margin: 0px 0px 0px;
+  color: $primary-white;
+  font-family: 'Museo sans';
   text-transform: uppercase;
+  font-size: $subheading-2-mobile;
 }
+
 
 @media screen and (min-width: 700px){
   .title_font{
@@ -77,10 +83,14 @@ $subheading-4-mobile: 14px;
   }
 
   .titleBlack{
+
     &_font{
+      color: $primary-black ;
       font-size: $subheading-1;
+
       &-light{
         font-size: $subheading-3;
+        color: $primary-black ;
       }
     }
   }
@@ -89,6 +99,7 @@ $subheading-4-mobile: 14px;
     font-size: $subheading-4-mobile;
   }
 }
+
 
 @media screen and (min-width: 900px){
   .film_title{

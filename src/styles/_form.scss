@@ -1,51 +1,131 @@
 form{
   top: -30%;
-  width: 80%;
+  width: 90%;
   padding: 7%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   box-shadow: 5px 10px 18px black;
-  background-color: #ffffff;
+  background-color: transparent;
+  border: 1px solid $primary-orange;
+
   input{
       width: 100%;
       margin: 5px;
       padding: 5px;
       border: none;
-      border-bottom: 2px solid #E8E8E8;
-      font-family: $text-font ;
+      margin-top: 5%;
+      font-weight: 100;
+      color: $primary-white;
+      font-family: $text-font;
+      background-color: transparent;
+      border-bottom: 1px solid $primary-orange;
+
       &:focus{
         outline: none !important;
-        background-color: $primary-white;
-        border: 1px solid $primary-white;
+        background-color: transparent;
+        border: 1px solid $primary-orange;
+        &::-moz-placeholder { color:transparent; }
+        &::-moz-placeholder { color:transparent; }
+        &::-ms-input-placeholder { color:transparent; }
+        &::-webkit-input-placeholder { color:transparent; }
       }
+
       &::placeholder{
-        color: #595959;
-      }
+        color: $primary-orange;
+    }
   }
+
   textarea{
     width: 100%;
     margin: 5px;
-    margin-top: none;
     padding: 5px;
     border: none;
+    margin-top: 10%;
+    font-weight: 100;
+    margin-bottom: 10%;
     border-radius: 0.1em;
-    background-color: #ffffff;
-    border: 2px solid #E8E8E8;
+    color: $primary-white;
+    font-family: $text-font;
+    background-color: transparent;
+    border: 1px solid $primary-orange;
+
     &:focus{
       outline: none !important;
-      background-color: $primary-white;
-      border: 1px solid $primary-white;
+      background-color: transparent;
+      border: 1px solid $primary-orange;
+      &::-moz-placeholder { color:transparent; }
+      &::-moz-placeholder { color:transparent; }
+      &::-ms-input-placeholder { color:transparent; }
+      &::-webkit-input-placeholder { color:transparent; }
     }
+
     &::placeholder{
-      color: #595959;
+      color: $primary-orange;
     }
   }
 }
 
+
+
 .error{
   border-bottom: 2px solid red;
 }
+
+@media screen and (min-width: 700px){
+  form{
+    padding: 7%;
+    border: none;
+    background-color: #ffffff;
+
+    input{
+        margin: 5px;
+        padding: 5px;
+        border: none;
+        color: $primary-black;
+        border-bottom: 2px solid #E8E8E8;
+
+        &:focus{
+          background-color: $primary-white;
+          border: 1px solid $primary-white;
+          &::-moz-placeholder { color:#595959; }
+          &::-moz-placeholder { color:#595959; }
+          &::-ms-input-placeholder { color:#595959; }
+          &::-webkit-input-placeholder { color:#595959; }
+        }
+
+        &::placeholder{
+          color: #595959;
+      }
+    }
+
+    textarea{
+      margin: 5px;
+      padding: 5px;
+      border: none;
+      margin-top: none;
+      border-radius: 0.1em;
+      color: $primary-black;
+      background-color: #ffffff;
+      border: 2px solid #E8E8E8;
+
+      &:focus{
+        outline: none !important;
+        background-color: $primary-white;
+        border: 1px solid $primary-white;
+        &::-moz-placeholder { color:#595959; }
+        &::-moz-placeholder { color:#595959; }
+        &::-ms-input-placeholder { color:#595959; }
+        &::-webkit-input-placeholder { color:#595959; }
+      }
+
+      &::placeholder{
+        color: #595959;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 900px){
   form{
     width: 50%;

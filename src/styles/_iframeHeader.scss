@@ -1,0 +1,39 @@
+iframe {
+width: 700px;
+height: 400px;
+margin: 0 auto;
+display: block;
+margin-top: 100px;
+position: absolute;
+margin-left: -100px;
+transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 700px){
+  iframe {
+  width: 900px;
+  height: 700px;
+  margin: 0 auto;
+  display: block;
+ }
+}
+
+@media screen and (min-width: 900px){
+  iframe {
+  height: 800px;
+  width: 1200px;
+  margin: 0 auto;
+  display: block;
+}
+
+}
+
+
+@media screen and (min-width: 1500px){
+  iframe {
+  width: 1500px;
+  margin: 0 auto;
+  display: block;
+  }
+
+}

@@ -24,6 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
+@import '@/styles/_iframeHeader.scss';
 
 .header{
   width: 100%;
@@ -84,16 +85,7 @@ export default {
       color: $primary-orange;
     }
 
-    iframe {
-    width: 700px;
-    height: 400px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 100px;
-    position: absolute;
-    margin-left: -100px;
-    transform: rotate(-45deg);
-  }
+
 
 @media screen and (min-width: 700px){
   .header{
@@ -109,12 +101,6 @@ export default {
       }
     }
 
-    iframe {
-    width: 900px;
-    height: 700px;
-    margin: 0 auto;
-    display: block;
-  }
 
     #firstText{
       font-size: 38px;
@@ -142,12 +128,7 @@ export default {
       }
     }
   }
-  iframe {
-  height: 800px;
-  width: 1200px;
-  margin: 0 auto;
-  display: block;
-}
+
 
   #firstText{
     font-size: 40px;
@@ -184,11 +165,7 @@ export default {
       font-size: 28.5px;
     }
 
-    iframe {
-    width: 1500px;
-    margin: 0 auto;
-    display: block;
-  }
+  
 }
 
 

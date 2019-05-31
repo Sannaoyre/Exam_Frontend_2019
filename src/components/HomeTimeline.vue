@@ -18,6 +18,7 @@
               </b-col>
         </b-row>
     </b-container>
+    <div class="gradientBoxReverse"></div>
   </div>
 </template>
 
@@ -91,7 +92,7 @@ export default {
 }
 
 .timeline:nth-child(5) {
-  @extend .gradientBoxReverse ;
+  @extend .blackBox ;
 }
 
 .timeline_cicle:before:nth-child(5){

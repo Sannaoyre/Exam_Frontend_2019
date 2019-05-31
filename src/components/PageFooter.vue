@@ -21,6 +21,7 @@ export default {
 @import '@/styles/main.scss';
 
 footer{
+  border-top: 1px solid $primary-white;
   background-color: $primary-black;
   p{
     color: $primary-white;

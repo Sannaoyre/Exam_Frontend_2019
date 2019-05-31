@@ -1,37 +1,41 @@
 nav{
-  position: fixed;
-  z-index: 999;
   width: 100%;
+  z-index: 999;
+  position: fixed;
   background-image: linear-gradient(to right, $primary-black 50%,  $primary-orange 50%);
-  a{
-    margin-left: 2%;
-    float: right;
-    color: $primary-black;
-    &:first-child{
-      margin-right: 5%;
-    }
-    &:hover{
-      border-bottom: 2px solid $primary-black;
-      text-decoration: none;
-    }
-  }
 
-}
+    a{
+      margin-left: 2%;
+      float: right;
+      color: $primary-black;
+
+        &:first-child{
+          margin-right: 5%;
+        }
+
+        &:hover{
+          text-decoration: none;
+          border-bottom: 2px solid $primary-black;
+        }
+      }
+    }
+
 
 .navOnScroll{
-  background-color: $primary-black;
   color: $primary-white;
+  background-color: $primary-black;
   border-bottom: 1px solid $primary-white;
-  a:hover{
-      border-bottom: 2px solid $primary-white;
-      text-decoration: none;
-  }
-}
+
+    a:hover{
+        text-decoration: none;
+        border-bottom: 2px solid $primary-white;
+    }
+ }
+
 
 @media screen and (min-width: 700px){
-
   nav{
-    background-color: transparent;
     background-image: none;
+    background-color: transparent;
   }
 }

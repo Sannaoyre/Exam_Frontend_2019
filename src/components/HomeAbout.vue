@@ -9,7 +9,7 @@
       <b-container fluid class="[ about ]" >
           <b-row>
                 <b-col sm="12" md="2" lg="4">
-              IMG
+                  <img src="@/assets/profilepicture.jpg" alt="Profile picture"></img>
                 </b-col>
 
                 <b-col sm="12" md="6" lg="4">
@@ -61,7 +61,8 @@
 
 <script>
 export default {
-  name: 'HomeAbout'
+  name: 'HomeAbout',
+
 }
 </script>
 
@@ -70,7 +71,9 @@ export default {
 @import '@/styles/main.scss';
 
 
-
+img{
+  width: 50%;
+}
 
 .about{
   &_text{

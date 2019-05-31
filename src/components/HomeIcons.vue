@@ -168,4 +168,14 @@ to{
   }
 
 }
+
+@media screen and (min-width: 1500px){
+  .icons{
+    &_text{
+      margin-top: 9%;
+
+    }
+  }
+}
+
 </style>
