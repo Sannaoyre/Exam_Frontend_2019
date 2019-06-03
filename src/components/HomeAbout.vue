@@ -8,13 +8,13 @@
 
       <b-container fluid class="[ about ]" >
           <b-row>
-                <b-col sm="12" md="2" lg="4">
-                  <img src="@/assets/profilepicture.jpg" alt="Profile picture"></img>
+                <b-col sm="12" md="4" lg="4">
+                  <img src="@/assets/profilepicture_orange.png" alt="Profile picture">
                 </b-col>
 
-                <b-col sm="12" md="6" lg="4">
+                <b-col sm="12" md="4" lg="4">
                   <h3 class="[ about_headline ]">Hey!</h3>
-                  <p class="[ about_text ]">Norway based 24-year-old film editor that is progressively leaning more towards motion graphic design. I do jobs on advertisement projects, music videos and logo animations.<br><br> Norway based 24-year-old film editor that is progressively leaning more towards motion graphic design.
+                  <p class="[ about_text ]">Norway based 24-year-old film editor that is progressively leaning more towards motion graphic design. I do jobs on advertisement projects, music videos and logo animations.
                   </p>
                 </b-col>
 
@@ -23,19 +23,19 @@
 
                     <div class="[ skillbar-outer ]">
                         <div class="[ skillbar-inner ]">
-                          <div><p class="[ skillbar_inner-text ]">Adobe Audition</p></div>
-                        </div>
-                    </div>
-
-                    <div class="[ skillbar-outer ]">
-                        <div class="[ skillbar-innerTwo ]">
                           <div><p class="[ skillbar_inner-text ]">Adobe Premiere Pro</p></div>
                         </div>
                     </div>
 
                     <div class="[ skillbar-outer ]">
-                        <div class="[ skillbar-innerThree ]">
+                        <div class="[ skillbar-innerTwo ]">
                           <div><p class="[ skillbar_inner-text ]">Adobe After Effects</p></div>
+                        </div>
+                    </div>
+
+                    <div class="[ skillbar-outer ]">
+                        <div class="[ skillbar-innerThree ]">
+                          <div><p class="[ skillbar_inner-text ]">Adobe Photoshop</p></div>
                         </div>
                     </div>
 
@@ -47,7 +47,7 @@
 
                     <div class="[ skillbar-outer ]">
                         <div class="[ skillbar-innerFive ]">
-                          <div><p class="[ skillbar_inner-text ]">Adobe Photoshop</p></div>
+                          <div><p class="[ skillbar_inner-text ]">Adobe Audition</p></div>
                         </div>
                     </div>
 
@@ -72,17 +72,21 @@ export default {
 
 
 img{
-  width: 50%;
+  width: 80%;
 }
 
 .about{
   &_text{
     color: $primary-white;
     font-size: $subheading-4-mobile;
+    font-family: $text-font;
+    font-weight: 100;
   }
   &_headline{
     color: $primary-white;
     font-size: $subheading-3-mobile;
+    font-family: $text-font;
+    font-weight: 100;
   }
 }
 
@@ -149,6 +153,10 @@ img{
       margin: 12px;
       font-size: 8px;
     }
+  }
+
+  img{
+    margin-top: -10%;
   }
 }
 
