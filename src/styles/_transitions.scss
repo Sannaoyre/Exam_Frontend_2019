@@ -1,6 +1,41 @@
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to{
   opacity: 0;
+}
+
+
+.test{
+  animation: progressAnimation 6s;
+}
+
+@keyframes progressAnimation {
+  0%   { width: 50%; background-color: #fc8759;}
+  100% { width: 100%; background-color: $primary-orange; }
+}
+@keyframes progressAnimationTwo {
+  0%   { width: 50%; background-color: #fc8759;}
+  100% { width: 80%; background-color: $primary-orange; }
+}
+@keyframes progressAnimationThree {
+  0%   { width: 50%; background-color: #fc8759;}
+  100% { width: 70%; background-color: $primary-orange; }
+}
+@keyframes progressAnimationFour {
+  0%   { width: 50%; background-color: #fc8759;}
+  100% { width: 60%; background-color: $primary-orange; }
+}
+@keyframes progressAnimationFive {
+  0%   { width: 40%; background-color: #fc8759;}
+  100% { width: 50%; background-color: $primary-orange; }
+}
+
+@keyframes slideInFromLeft {
+0% {
+  transform: translateX(-100%);
+}
+100% {
+  transform: translateX(0);
+}
 }

@@ -1,41 +1,50 @@
+
 <template>
-  <div>
-
-    <nav>
-        <img src="@/assets/logo_white.png" alt="Profile picture">
-        <a href="#contact">Contact</a>
-        <a href="#about" v-if="this.$route.matched[0].name === 'home' || this.$route.matched[0].name === 'projects'">About</a>
-
-        <router-link to="projects">Projects</router-link>
-        <router-link to="/">Home</router-link>
-    </nav>
-
-  </div>
+ <div>
+     <nav v-on:scroll="handleScroll">
+       <img src="@/assets/logo_white.png" alt="Profile picture">
+         <router-link to="projects">Projects</router-link>
+         <router-link to="/">Home</router-link>
+     </nav>
+ </div>
 </template>
+
+
 
 <script>
 
 export default {
   name: 'PageNavigation',
 
-  methods: {
+ methods: {
 
-    handleScroll () {
-      console.log('scrolling');
-      document.body.scrollTop=0;
-    }
-   },
-    created () {
-      console.log('My route name', this.$route.matched[0].name.name);
-     window.addEventListener('scroll', this.handleScroll);
+   handleScroll () {
+      var e = document.getElementsByTagName('nav');
+      if(window.scrollY <= 10){
+        console.log('I am at the top');
+        e[0].classList.remove("navOnScroll");
+      }
+      else{
 
-    },
-    destroyed () {
-      window.removeEventListener('scroll', this.handleScroll);
+        e[0].classList.add("navOnScroll");
+      }
     }
+ },
+
+   created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
+}
+
 </script>
+
+
+
 
 
 <style lang="scss" scoped>
@@ -45,5 +54,4 @@ img{
   width: 5%;
   padding: 1%;
 }
-
 </style>

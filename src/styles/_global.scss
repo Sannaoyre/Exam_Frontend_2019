@@ -10,8 +10,7 @@
   background-color: $primary-black;
 }
 .gradientBox{
-
-   height: 500px;
+   height: 600px;
    display: block;
    background-image: linear-gradient(to bottom right, $primary-black 50%,  $primary-black 50%);
 }
@@ -89,14 +88,14 @@ p{
 
   .gradient2Box{
     height: 500px;
-    display: block;
-    background-image: linear-gradient(to bottom left,#f26622 50%,  black 50%);
+  }
+
+  .gradientBox{
+     height: 550px;
   }
 
   .gradient2BoxReverse{
-    height: 500px;
-    display: block;
-    background-image: linear-gradient(to bottom left, black 50%, #f26622 50%);
+    height: 550px;
   }
 
   .blackBox{

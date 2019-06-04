@@ -67,9 +67,11 @@ export default {
     }
   }
 
+
     #firstText{
       font-size: $subheading-4;
       font-weight: 100;
+      animation: 1s ease-out 0s 1 slideInFromLeft;
     }
     #firstText_bold{
       font-weight: bolder;
@@ -78,11 +80,13 @@ export default {
       font-weight: 100;
       font-size: 13.5px;
       letter-spacing: 0.5em;
+      animation: 1.5s ease-out 0s 1 slideInFromLeft;
     }
     #thirdText{
       font-size: 8.5px;
       letter-spacing: 0.1em;
       color: $primary-orange;
+      animation: 2s ease-out 0s 1 slideInFromLeft;
     }
 
 

@@ -17,7 +17,7 @@ $subheading-4-mobile: 14px;
 //////////Main titles//////////
 .title{
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   text-align: center;
 
   &_font{
@@ -75,6 +75,9 @@ $subheading-4-mobile: 14px;
 
 
 @media screen and (min-width: 700px){
+  .title{
+    margin-bottom: 5%;
+  }
   .title_font{
     font-size: $subheading-1;
     &-light{

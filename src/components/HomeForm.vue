@@ -10,22 +10,22 @@
         <b-row>
 
           <b-col sm="12" md="6">
-            <input placeholder="Name" id="firstName" v-model="name" type="text" name="name" v-on:blur="validateName()">
+            <input placeholder="Name" id="firstName" type="text" name="name" v-on:blur="validateName()">
               <span class="error" id="firstNameError">This field cannot be blank</span>
           </b-col>
 
           <b-col sm="12" md="6">
-            <input placeholder="Last name" id="lastName" v-model="lastName" type="text" name="lastName" v-on:blur="validateLastname()">
+            <input placeholder="Last name" id="lastName" type="text" name="lastName" v-on:blur="validateLastname()">
             <span class="error" id="lastNameError">This field cannot be blank</span>
           </b-col>
 
           <b-col sm="12">
-            <input placeholder="Email" id="email" v-model="email" type="text" name="email" v-on:blur="validateEmail()">
+            <input placeholder="Email" id="email"  type="text" name="email" v-on:blur="validateEmail()">
             <span class="error" id="emailError">Please enter a correct email address</span>
           </b-col>
 
           <b-col sm="12">
-            <textarea placeholder="Message" rows="6" id="message" v-model="message" type="text" name="message" v-on:blur="validateMessage()"></textarea>
+            <textarea placeholder="Message" rows="6" id="message" type="text" name="message" v-on:blur="validateMessage()"></textarea>
             <span class="error" id="messageError">Please enter a message</span>
           </b-col>
 

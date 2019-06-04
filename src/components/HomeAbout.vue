@@ -63,7 +63,10 @@
 export default {
   name: 'HomeAbout',
 
+
+
 }
+
 </script>
 
 
@@ -75,7 +78,7 @@ img{
   width: 80%;
   display: block;
   margin-left: auto;
-  margin-right: auto 
+  margin-right: auto
 }
 
 .about{
@@ -94,7 +97,6 @@ img{
 }
 
 .skillbar{
-
   &-outer{
     width: 100%;
     border-radius: 3em;
@@ -104,25 +106,32 @@ img{
     width: 100%;
     border-radius: 3em;
     background-color: $primary-orange;
+    animation: progressAnimation 6s;
+
     &Two{
         width: 80%;
         border-radius: 3em;
         background-color: $primary-orange;
+        animation: progressAnimationTwo 6s;
+
     }
     &Three{
       width: 70%;
       border-radius: 3em;
       background-color: $primary-orange;
+      animation: progressAnimationThree 6s;
     }
     &Four{
       width: 60%;
       border-radius: 3em;
       background-color: $primary-orange;
+      animation: progressAnimationFour 6s;
     }
     &Five{
       width: 50%;
       border-radius: 3em;
       background-color: $primary-orange;
+      animation: progressAnimationFive 6s;
     }
     &-text{
       margin: 10px;

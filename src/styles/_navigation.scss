@@ -5,18 +5,18 @@ nav{
   background-image: linear-gradient(to right, $primary-black 50%,  $primary-orange 50%);
 
     a{
-      margin-right: 1%;
       float: right;
       color: $primary-black;
-      padding: 1%;
       font-size: $subheading-3-mobile;
       text-transform: uppercase;
-
-        &:first-child{
-          margin-right: 5%;
-        }
+      margin-top: 0.5%;
+      padding: 1%;
+      &:first-child{
+         margin-right: 5%;
+       }
 
         &:hover{
+
           text-decoration: none;
           border-bottom: 2px solid $primary-black;
         }
@@ -25,13 +25,16 @@ nav{
 
 
 .navOnScroll{
-  color: $primary-white;
   background-color: $primary-black;
   border-bottom: 1px solid $primary-white;
+  a{
+    color: $primary-white;
+
+  }
 
     a:hover{
         text-decoration: none;
-        border-bottom: 2px solid $primary-white;
+        border-bottom: 1px solid $primary-white;
     }
  }
 
