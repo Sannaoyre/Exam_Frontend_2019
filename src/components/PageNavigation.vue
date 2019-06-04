@@ -1,15 +1,14 @@
 <template>
   <div>
-      <nav id="navbar" v-on:scroll="handleScroll">
-          <router-link
-                       @click.native.prevent="scrollFix(routes.page)"
-                       v-for="routes in links"
-                       v-bind:key="routes.id"
-                      :to="`${routes.page}`">{{routes.text}}
-         </router-link>
 
-      </nav>
+    <nav>
+        <img src="@/assets/logo_white.png" alt="Profile picture">
+        <a href="#contact">Contact</a>
+        <a href="#about" v-if="this.$route.matched[0].name === 'home' || this.$route.matched[0].name === 'projects'">About</a>
 
+        <router-link to="projects">Projects</router-link>
+        <router-link to="/">Home</router-link>
+    </nav>
 
   </div>
 </template>
@@ -18,68 +17,33 @@
 
 export default {
   name: 'PageNavigation',
-  data(){
-    return{
-      links: [
-        {
-          id: 0,
-          text: 'Home',
-          page: '/'
-        },
-        {
-          id: 0,
-          text: 'About',
-          page: '/#about'
-        },
-        {
-          id: 0,
-          text: 'Projects',
-          page: '/#/projects'
-        },
-        {
-          id: 0,
-          text: 'Contact',
-          page: '/#contact'
-        }
-      ],
-      scrolled: false
-    }
-  },
 
   methods: {
-    scrollFix: function(hashbang)
-    {
-      location.href = hashbang;
-    },
 
     handleScroll () {
-       console.log('scrolling');
-
-
-
+      console.log('scrolling');
+      document.body.scrollTop=0;
     }
-  },
-  created () {
-   window.addEventListener('scroll', this.handleScroll);
- },
- destroyed () {
-   window.removeEventListener('scroll', this.handleScroll);
- }
-}
+   },
+    created () {
+      console.log('My route name', this.$route.matched[0].name.name);
+     window.addEventListener('scroll', this.handleScroll);
 
-
-
+    },
+    destroyed () {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
+  }
 
 </script>
 
 
-
-
-
-
-
-
-
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
+
+img{
+  width: 5%;
+  padding: 1%;
+}
+
 </style>

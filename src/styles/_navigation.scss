@@ -5,9 +5,12 @@ nav{
   background-image: linear-gradient(to right, $primary-black 50%,  $primary-orange 50%);
 
     a{
-      margin-left: 2%;
+      margin-right: 1%;
       float: right;
       color: $primary-black;
+      padding: 1%;
+      font-size: $subheading-3-mobile;
+      text-transform: uppercase;
 
         &:first-child{
           margin-right: 5%;

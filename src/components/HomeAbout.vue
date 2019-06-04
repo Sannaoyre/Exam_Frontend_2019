@@ -9,12 +9,12 @@
       <b-container fluid class="[ about ]" >
           <b-row>
                 <b-col sm="12" md="4" lg="4">
-                  <img src="@/assets/profilepicture_orange.png" alt="Profile picture">
+                  <img src="@/assets/profile_picture.png" alt="Profile picture">
                 </b-col>
 
                 <b-col sm="12" md="4" lg="4">
                   <h3 class="[ about_headline ]">Hey!</h3>
-                  <p class="[ about_text ]">Norway based 24-year-old film editor that is progressively leaning more towards motion graphic design. I do jobs on advertisement projects, music videos and logo animations.
+                  <p class="[ about_text ]">I am a 24-year-old film editor based in Norway. I am progressively leaning more towards motion graphic design. I do jobs on advertisement projects, music videos and logo animations.
                   </p>
                 </b-col>
 
@@ -73,6 +73,9 @@ export default {
 
 img{
   width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto 
 }
 
 .about{
@@ -98,7 +101,7 @@ img{
     background-color: $primary-white;
   }
   &-inner{
-    width: 90%;
+    width: 100%;
     border-radius: 3em;
     background-color: $primary-orange;
     &Two{

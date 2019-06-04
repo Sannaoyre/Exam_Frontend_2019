@@ -19,6 +19,7 @@ form{
       color: $primary-white;
       font-family: $text-font;
       background-color: transparent;
+      font-size: $subheading-3-mobile;
       border-bottom: 1px solid $primary-orange;
 
       &:focus{
@@ -45,9 +46,11 @@ form{
     font-weight: 100;
     margin-bottom: 10%;
     border-radius: 0.1em;
+    max-height: 300px;
     color: $primary-white;
     font-family: $text-font;
     background-color: transparent;
+    font-size: $subheading-3-mobile;
     border: 1px solid $primary-orange;
 
     &:focus{
@@ -69,7 +72,10 @@ form{
 
 
 .error{
-  border-bottom: 2px solid red;
+  font-family: $text-font;
+  font-weight: 100;
+  color: red;
+  display: none;
 }
 
 @media screen and (min-width: 700px){
@@ -83,6 +89,7 @@ form{
         padding: 5px;
         border: none;
         color: $primary-black;
+        font-size: $subheading-4;
         border-bottom: 2px solid #E8E8E8;
 
         &:focus{
@@ -106,6 +113,7 @@ form{
       margin-top: none;
       border-radius: 0.1em;
       color: $primary-black;
+      font-size: $subheading-4;
       background-color: #ffffff;
       border: 2px solid #E8E8E8;
 

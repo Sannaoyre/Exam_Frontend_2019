@@ -1,26 +1,35 @@
 <template>
   <div class="[ timelineContainer ]">
-    <div class="[ title ]">
-      <h1 class="[ title_font ]">My experience</h1>
-      <h2 class="[ title_font-light ]">TIMELINE</h2>
-    </div>
 
-    <b-container fluid>
-        <b-row  v-for="time in timeline"  class="[ timeline ]">
-              <b-col cols="4" md="5" lg="5">
-                  <div v-text="time.circle " class="[ timeline_cicle ]"></div>
+      <div class="[ title ]">
+          <h1 class="[ title_font ]">My experience</h1>
+          <h2 class="[ title_font-light ]">TIMELINE</h2>
+      </div>
 
-              </b-col>
-              <b-col cols="8" md="7" lg="7">
-                <h2 v-text="time.year" class="[ timeline_year ]" v-scroll-reveal.reset="{ delay: 250 }"></h2>
-                <p v-text="time.title" class="[ timeline_title ]" v-scroll-reveal.reset="{ delay: 500 }"></p>
-                <p v-text="time.description" class="[ timeline_description ]" v-scroll-reveal.reset="{ delay: 700 }"></p>
-              </b-col>
-        </b-row>
-    </b-container>
-    <div class="gradientBoxReverse"></div>
+      <b-container fluid>
+          <b-row  v-for="time in timeline"  class="[ timeline ]">
+
+                <b-col cols="4" md="5" lg="5">
+                    <div v-text="time.circle " class="[ timeline_cicle ]"></div>
+                </b-col>
+
+                <b-col cols="8" md="7" lg="7">
+                    <h2 v-text="time.year" class="[ timeline_year ]" v-scroll-reveal.reset="{ delay: 250 }"></h2>
+                    <p v-text="time.title" class="[ timeline_title ]" v-scroll-reveal.reset="{ delay: 500 }"></p>
+                    <p v-text="time.description" class="[ timeline_description ]" v-scroll-reveal.reset="{ delay: 700 }"></p>
+                </b-col>
+
+          </b-row>
+      </b-container>
+
+    <div class="gradientBoxReverse">
+   </div>
   </div>
 </template>
+
+
+
+
 
 <script>
 export default {
