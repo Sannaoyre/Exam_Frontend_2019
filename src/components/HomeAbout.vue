@@ -107,12 +107,15 @@ img{
     border-radius: 3em;
     background-color: $primary-orange;
     animation: progressAnimation 6s;
+    animation-iteration-count: infinite;
+
 
     &Two{
         width: 80%;
         border-radius: 3em;
         background-color: $primary-orange;
         animation: progressAnimationTwo 6s;
+        animation-iteration-count: infinite;
 
     }
     &Three{
@@ -120,18 +123,21 @@ img{
       border-radius: 3em;
       background-color: $primary-orange;
       animation: progressAnimationThree 6s;
+      animation-iteration-count: infinite;
     }
     &Four{
       width: 60%;
       border-radius: 3em;
       background-color: $primary-orange;
       animation: progressAnimationFour 6s;
+      animation-iteration-count: infinite;
     }
     &Five{
       width: 50%;
       border-radius: 3em;
       background-color: $primary-orange;
       animation: progressAnimationFive 6s;
+      animation-iteration-count: infinite;
     }
     &-text{
       margin: 10px;

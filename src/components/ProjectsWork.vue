@@ -11,14 +11,17 @@
                   <b-col class="[ film ]" v-for="film in films" sm="12" md="4" lg="4">
 
                     <h2 v-text="film.title"  class="[ film_title ]" ></h2>
-                    <iframe :src="film.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle"></iframe>
-                    <button v-on:click="film.show = !film.show" class="[ dropdownButton ]">
-                      <p class="[ dropdownButton_title ]">About this project
-                        <span class="[ dropdownButton_title-arrow ]" id="dropdownMark">V</span>
-                      </p>
-                      <transition name="fade"><p v-if="film.show" v-on-click-outside="close" id="dropdownText" v-text="film.description"></p></transition>
-                    </button>
+                      <iframe :src="film.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle"></iframe>
 
+                      <button v-on:click="film.show = !film.show" class="[ dropdownButton ]">
+                        <p class="[ dropdownButton_title ]">About this project
+                            <span class="[ dropdownButton_title-arrow ]" id="dropdownMark">V</span>
+                        </p>
+                        <transition name="fade">
+                          <p v-if="film.show" v-on-click-outside="close" id="dropdownText" v-text="film.description">
+                          </p>
+                        </transition>
+                    </button>
 
                   </b-col>
                 </b-row>

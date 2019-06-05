@@ -1,11 +1,22 @@
 
 <template>
  <div>
-     <nav v-on:scroll="handleScroll">
-       <img src="@/assets/logo_white.png" alt="Profile picture">
-         <router-link to="projects">Projects</router-link>
-         <router-link to="/">Home</router-link>
-     </nav>
+     <nav v-on:scroll="handleScroll" >
+       <div class="[ navigation ]">
+         <img src="@/assets/logo_white.png" alt="Logo for Markus" class="[ logo ]">
+          <div id="menuToggle">
+            <input type="checkbox" />
+               <span></span>
+               <span></span>
+               <span></span>
+
+           <section id="menu">
+                <router-link to="/">Home</router-link>
+                <router-link to="projects">Projects</router-link>
+             </section>
+          </div>
+       </div>
+    </nav>
  </div>
 </template>
 
@@ -20,15 +31,16 @@ export default {
 
    handleScroll () {
       var e = document.getElementsByTagName('nav');
+
       if(window.scrollY <= 10){
-        console.log('I am at the top');
+      //  console.log('I am at the top');
         e[0].classList.remove("navOnScroll");
       }
       else{
 
         e[0].classList.add("navOnScroll");
       }
-    }
+    },
  },
 
    created () {
@@ -50,8 +62,5 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
 
-img{
-  width: 5%;
-  padding: 1%;
-}
+
 </style>
