@@ -1,5 +1,6 @@
 $header-font: 'Lato', sans-serif;
-$text-font: 'Museo sans';
+$text-font: 'Museo Sans', 'Open Sans', sans-serif;
+
 
 $heading: 58px;
 $subheading-1: 30px;
@@ -12,6 +13,41 @@ $subheading-1-mobile: 20px;
 $subheading-2-mobile: 18px;
 $subheading-3-mobile: 16px;
 $subheading-4-mobile: 14px;
+
+
+
+//////////Header text//////////
+.headerText{
+  &_first{
+    font-weight: 100;
+    font-size: $subheading-4;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    &-bold{
+      font-weight: bolder;
+    }
+    &-larger{
+      letter-spacing: 0.06em;
+      @extend .headerText_first ;
+    }
+  }
+  &_second{
+    font-weight: 100;
+    font-size: 13.5px;
+    letter-spacing: 0.5em;
+    animation: 1.5s ease-out 0s 1 slideInFromLeft;
+    &-smaller{
+      letter-spacing: 0.3em;
+      @extend .headerText_second ;
+    }
+  }
+  &_third{
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    color: $primary-orange;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+  }
+}
+
 
 
 //////////Main titles//////////
@@ -29,14 +65,14 @@ $subheading-4-mobile: 14px;
       font-weight: 100;
       text-align: center;
       color: $primary-white;
-      font-family: 'Museo sans';
+      font-family: $text-font;
       font-size: $subheading-3-mobile;
     }
   }
 }
 
 .font_light{
-  font-family: 'Museo sans';
+  font-family: $text-font;
   font-weight: 100;
 }
 
@@ -56,7 +92,7 @@ $subheading-4-mobile: 14px;
     &-light{
       font-weight: 100;
       color: $primary-white;
-      font-family: 'Museo sans';
+      font-family: $text-font;
       font-size: $subheading-3-mobile;
     }
   }
@@ -68,25 +104,38 @@ $subheading-4-mobile: 14px;
   text-align: center;
   margin: 0px 0px 0px;
   color: $primary-white;
-  font-family: 'Museo sans';
+  font-family: $text-font;
   text-transform: uppercase;
   font-size: $subheading-2-mobile;
 }
 
 
 @media screen and (min-width: 700px){
-  .title{
-    margin-bottom: 5%;
-  }
-  .title_font{
-    font-size: $subheading-1;
-    &-light{
-      font-size: $subheading-3;
+  .headerText{
+    &_first{
+      font-size: 38px;
+    }
+    &_second{
+      font-size: 28px;
+    }
+    &_third{
+      font-size: $subheading-4;
     }
   }
 
-  .titleBlack{
 
+  .title{
+    margin-bottom: 5%;
+    &_font{
+      font-size: $subheading-1;
+      &-light{
+        font-size: $subheading-3;
+      }
+    }
+  }
+
+
+  .titleBlack{
     &_font{
       color: $primary-black ;
       font-size: $subheading-1;
@@ -105,7 +154,35 @@ $subheading-4-mobile: 14px;
 
 
 @media screen and (min-width: 900px){
+  .headerText{
+    &_first{
+      font-size: 40px;
+    }
+    &_second{
+      font-size: $subheading-1;
+    }
+    &_third{
+        font-size: 19px;
+    }
+  }
+
   .film_title{
     font-size: $subheading-4;
+  }
+}
+
+
+@media screen and (min-width: 1500px){
+
+  .headerText{
+    &_first{
+      font-size: 60px;
+    }
+    &_second{
+      font-size: 45px;
+    }
+    &_third{
+        font-size: 28.5px;
+    }
   }
 }

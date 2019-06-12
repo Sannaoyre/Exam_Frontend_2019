@@ -16,7 +16,7 @@ form{
       border: none;
       margin-top: 5%;
       font-weight: 100;
-      color: $primary-white;
+      color: $primary-orange;
       font-family: $text-font;
       background-color: transparent;
       font-size: $subheading-3-mobile;
@@ -38,16 +38,16 @@ form{
   }
 
   textarea{
-    width: 100%;
     margin: 5px;
+    width: 100%;
     padding: 5px;
     border: none;
     margin-top: 10%;
     font-weight: 100;
+    max-height: 300px;
     margin-bottom: 10%;
     border-radius: 0.1em;
-    max-height: 300px;
-    color: $primary-white;
+    color: $primary-orange;
     font-family: $text-font;
     background-color: transparent;
     font-size: $subheading-3-mobile;
@@ -75,7 +75,6 @@ form{
   font-family: $text-font;
   font-weight: 100;
   color: red;
-  display: none;
 }
 
 @media screen and (min-width: 700px){

@@ -20,14 +20,10 @@ ul{
     background-color: transparent;
     border: 2px solid $primary-orange;
 
-      a{
+      button{
         font-size: 12px;
         font-weight: 100;
         color: $primary-orange;
-
-          &:hover{
-            text-decoration: none;
-          }
         }
       }
     }
@@ -38,7 +34,7 @@ ul{
 .is-active{
     background-color: $primary-orange;
 
-      a{
+      button{
         color: $primary-black;
         text-decoration: none;
        }
@@ -65,7 +61,7 @@ ul{
       color: $primary-white;
       background-color: transparent;
 
-      a{
+      button{
         color: $primary-white;
         font-size: $subheading-4-mobile;
 
@@ -80,7 +76,7 @@ ul{
     background-color: transparent;
     border-bottom: 2px solid $primary-orange;
 
-      a{
+      button{
         color: $primary-orange;
       }
     }
@@ -89,7 +85,7 @@ ul{
 
 
 @media screen and (min-width: 900px){
-  ul li a{
+  ul li button{
     font-size: $subheading-4;
 
   }

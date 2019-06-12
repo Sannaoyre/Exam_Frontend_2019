@@ -18,20 +18,11 @@ export default {
     return {
         isActive: false
     };
-
   },
-
-  computed: {
-    href() {
-      return '#' + this.name.toLowerCase();
-    }
-  },
-
 
   mounted(){
     this.isActive= this.selected;
   }
-
 }
 </script>
 

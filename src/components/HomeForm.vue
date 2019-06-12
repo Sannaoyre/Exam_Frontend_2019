@@ -5,34 +5,42 @@
       <h2 class="[ titleBlack_font-light ]">CONTACT</h2>
     </div>
 
-    <form>
-      <b-container fluid id="contact">
+    <form @submit="checkForm" action="send.php" method="post">
+      <b-container fluid>
         <b-row>
 
           <b-col sm="12" md="6">
-            <input placeholder="Name" id="firstName" type="text" name="name" v-on:blur="validateName()">
-              <span class="error" id="firstNameError">This field cannot be blank</span>
+            <p>
+                <input type="text" name="name" id="name" v-model="name" placeholder="Name" v-on:blur="checkName()">
+                <span class="[ error ]" v-if="nameError">{{ nameError }}</span>
+            </p>
           </b-col>
 
           <b-col sm="12" md="6">
-            <input placeholder="Last name" id="lastName" type="text" name="lastName" v-on:blur="validateLastname()">
-            <span class="error" id="lastNameError">This field cannot be blank</span>
+            <p>
+                <input type="text" name="lastName" id="lastName" v-model="lastName" placeholder="Last name" v-on:blur="checkLastname()">
+                <span class="[ error ]" v-if="lastNameError">{{ lastNameError }}</span>
+            </p>
           </b-col>
 
           <b-col sm="12">
-            <input placeholder="Email" id="email"  type="text" name="email" v-on:blur="validateEmail()">
-            <span class="error" id="emailError">Please enter a correct email address</span>
+            <p>
+                <input type="text" name="email" id="email" v-model="email" placeholder="Email" v-on:blur="checkEmail()">
+                <span class="[ error ]" v-if="emailError">{{ emailError }}</span>
+            </p>
           </b-col>
 
           <b-col sm="12">
-            <textarea placeholder="Message" rows="6" id="message" type="text" name="message" v-on:blur="validateMessage()"></textarea>
-            <span class="error" id="messageError">Please enter a message</span>
+            <p>
+                <textarea type="text" name="message" id="message" v-model="message" placeholder="Message" rows="6" v-on:blur="checkMessage()"></textarea>
+                <span class="[ error ]" v-if="messageError">{{ messageError }}</span>
+            </p>
           </b-col>
 
         </b-row>
       </b-container>
 
-      <button class="[ button_form ]" type="submit" value="submit" v-on:click="validateForm()">
+      <button class="[ button_form ]" type="submit" value="submit">
         <p>SEND</p>
       </button>
 
@@ -45,66 +53,74 @@
 
 
 
-
-
-
-
 <script>
 export default {
   name: 'HomeForm',
-  data() {
-      return {
-        input: {
-        }
-      };
+  data(){
+    return{
+    nameError: null,
+    lastNameError: null,
+    emailError: null,
+    messageError: null,
+    name: null,
+    lastName: null,
+    email: null,
+    message: null,
+  }
   },
+
+
  methods: {
-   validateName() {
-   if (firstName.value === "") {
-       document.getElementById("firstNameError").style.display = "block";
-         return false;
-       } else {
-         document.getElementById("firstNameError").style.display = "none";
-      }
-      this.firstName = ''
+   checkForm:function(e) {
+     var a = this.checkName();
+     var b = this.checkLastname();
+     var c = this.checkEmail();
+     var d = this.checkMessage();
+     if (a&&b&&c&&d) return true;
+     e.preventDefault();
    },
 
-    validateLastname(){
-      if (lastName.value === "" ) {
-       document.getElementById("lastNameError").style.display = "block";
-       return false;
+   checkName() {
+     this.nameError = "";
+       if(!this.name) {
+         this.nameError = "Name required.";
+         return false;
+       } else {
+         return true;
+      }
+   },
+
+  checkLastname(){
+    this.lastNameError = "";
+      if(!this.lastName) {
+        this.lastNameError = "Last name required.";
+        return false;
       } else {
-       document.getElementById("lastNameError").style.display = "none";
-     }
+        return true;
+      }
   },
 
-  validateEmail(){
-    const emailExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/g;
-
-    if (emailExp.test(email.value) ) {
-      document.getElementById("emailError").style.display = "none";
-    } else {
-      document.getElementById("emailError").style.display = "block";
+  checkEmail(){
+   const emailExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/g;
+    this.emailError = "";
+    if(!emailExp.test(this.email)){
+      this.emailError ="Please fill in a valid email address";
       return false;
+    } else {
+      return true;
     }
   },
 
-  validateMessage(){
-    if (message.value === "" ) {
-     document.getElementById("messageError").style.display = "block";
-     return false;
-    } else {
-     document.getElementById("messageError").style.display = "none";
-   }
- },
 
-  validateForm(){
-    const app = this;
-    app.validateName();
-    app.validateLastname();
-    app.validateEmail();
-    app.validateMessage();
-    }
+  checkMessage(){
+    this.messageError = "";
+      if(!this.message) {
+        this.messageError = "A message is required.";
+        return false;
+      } else {
+        return true;
+      }
+    },
   }
 }
 </script>

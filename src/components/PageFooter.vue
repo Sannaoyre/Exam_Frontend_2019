@@ -17,16 +17,18 @@ export default {
 }
 </script>
 
+
+
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
 
 footer{
-  border-top: 1px solid $primary-white;
   background-color: $primary-black;
+  border-top: 1px solid $primary-white;
   p{
-    color: $primary-white;
     padding: 50px;
     text-align: center;
+    color: $primary-white;
     font-family: $header-font;
   }
 }

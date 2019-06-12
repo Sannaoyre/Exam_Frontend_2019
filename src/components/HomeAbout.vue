@@ -8,17 +8,17 @@
 
       <b-container fluid class="[ about ]" >
           <b-row>
-                <b-col sm="12" md="4" lg="4">
+                <b-col sm="12" md="12" lg="4">
                   <img src="@/assets/profile_picture.png" alt="Profile picture">
                 </b-col>
 
-                <b-col sm="12" md="4" lg="4">
+                <b-col sm="12" md="6" lg="4">
                   <h3 class="[ about_headline ]">Hey!</h3>
                   <p class="[ about_text ]">I am a 24-year-old film editor based in Norway. I am progressively leaning more towards motion graphic design. I do jobs on advertisement projects, music videos and logo animations.
                   </p>
                 </b-col>
 
-                <b-col  sm="12" md="4" lg="4">
+                <b-col  sm="12" md="6" lg="4">
                   <div class="[ skillbar ]">
 
                     <div class="[ skillbar-outer ]">
@@ -74,6 +74,7 @@ export default {
 @import '@/styles/main.scss';
 
 
+
 img{
   width: 80%;
   display: block;
@@ -83,16 +84,16 @@ img{
 
 .about{
   &_text{
-    color: $primary-white;
-    font-size: $subheading-4-mobile;
-    font-family: $text-font;
     font-weight: 100;
+    color: $primary-white;
+    font-family: $text-font;
+    font-size: $subheading-4-mobile;
   }
   &_headline{
-    color: $primary-white;
-    font-size: $subheading-3-mobile;
-    font-family: $text-font;
     font-weight: 100;
+    color: $primary-white;
+    font-family: $text-font;
+    font-size: $subheading-3-mobile;
   }
 }
 
@@ -105,8 +106,8 @@ img{
   &-inner{
     width: 100%;
     border-radius: 3em;
-    background-color: $primary-orange;
     animation: progressAnimation 6s;
+    background-color: $primary-orange;
     animation-iteration-count: infinite;
 
 
@@ -157,6 +158,9 @@ img{
 
 
 @media screen and (min-width: 700px){
+  img{
+    display: none;
+  }
   .about{
     &_text{
       font-size: $subheading-4-mobile;
@@ -169,7 +173,7 @@ img{
   .skillbar{
     &_inner-text{
       margin: 12px;
-      font-size: 8px;
+      font-size: 13px;
     }
   }
 
@@ -180,8 +184,15 @@ img{
 
 
 
+@media screen and (min-width: 1020px){
+  img{
+    display: block;
+  }
+}
 
-@media screen and (min-width: 900px){
+
+
+@media screen and (min-width: 1200px){
   .about{
     &_text{
       font-size: $subheading-4;

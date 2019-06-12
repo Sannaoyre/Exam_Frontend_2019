@@ -1,6 +1,14 @@
+//////////All buttons//////////
+button{
+  all: unset;
+}
+
 button:focus{
   outline: none;
 }
+
+
+
 //////////Button for form on home page//////////
 .button_form{
   width: 100px;
@@ -27,51 +35,38 @@ button:focus{
   }
 }
 
+
+
 //////////Button for project page//////////
 .dropdownButton{
   width: 100%;
   border: none;
+  font-weight: 100;
+  text-align: center;
+  color: $primary-white;
+  font-family: $text-font;
+  text-transform: uppercase;
   background-color: transparent;
+  font-size: $subheading-2-mobile;
   border-bottom: 1px solid $primary-white;
-
 
   &:hover .dropdownButton_title {
     opacity: 0.6;
   }
-
-  &_title{
-    font-weight: 100;
-    color: $primary-white;
-    font-family: $text-font;
-    text-transform: uppercase;
-    font-size: $subheading-2-mobile;
-
-      &-arrow{
-        font-weight: 400;
-        font-family: $header-font;
-
-    }
-  }
 }
 
-
-#dropdownText{
+.dropdownText{
   position: absolute;
   font-weight: 100;
   text-align: left;
   color: $primary-white;
   font-family: $text-font;
   font-size: $subheading-3-mobile;
-
-
 }
 
 
 
-
-
 @media screen and (min-width: 700px){
-//////////Button for form on home page//////////
   .button_form{
     width: 100px;
     height: 30px;
@@ -96,27 +91,23 @@ button:focus{
   }
 
   .dropdownButton{
-    &_title{
       font-size: $subheading-3-mobile;
-    }
   }
 
-  #dropdownText{
+  .dropdownText{
     font-size: $subheading-3-mobile;
   }
 }
 
 
+
 @media screen and (min-width: 900px){
 
   .dropdownButton{
-
-    &_title{
       font-size: $subheading-4;
-    }
   }
 
-  #dropdownText{
+  .dropdownText{
     font-size: $subheading-4;
   }
 }

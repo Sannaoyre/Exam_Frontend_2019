@@ -7,7 +7,7 @@
       </div>
 
       <b-container fluid>
-          <b-row  v-for="time in timeline"  class="[ timeline ]">
+          <b-row  v-for="time in timeline" v-bind:key="time.id"  class="[ timeline ]">
 
                 <b-col cols="4" md="5" lg="5">
                     <div v-text="time.circle " class="[ timeline_cicle ]"></div>
@@ -23,6 +23,7 @@
       </b-container>
 
     <div class="gradientBoxReverse">
+
    </div>
   </div>
 </template>
@@ -50,6 +51,8 @@ export default {
 
 </script>
 
+
+
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
 
@@ -57,17 +60,15 @@ export default {
   margin-top: 10%;
 }
 
-
 .timeline{
+    padding-bottom: 20%;
     color: $primary-white;
     font-family: $text-font;
-    padding-bottom: 20%;
-
 
   &_year{
+    margin-top: 2%;
     @extend .font_light ;
     font-size: $subheading-1-mobile;
-    margin-top: 2%;
   }
   &_title{
     @extend .font_light ;
@@ -81,23 +82,23 @@ export default {
   &_cicle{
         width: 30px;
         height: 30px;
+        float: right;
+        margin-top: 5%;
+        margin-bottom: 30%;
+        text-align: center;
         border-radius: 100%;
         background-color: $primary-black;
-        float: right;
-        margin-bottom: 30%;
-        margin-top: 5%;
         border: 5px solid $primary-orange;
-        text-align: center;
-      }
+  }
 }
 
 .timeline_cicle::before{
+  z-index: -1;
   content: '';
-  position: absolute;
   width: 0.2em;
   height: 150%;
+  position: absolute;
   background: $primary-orange;
-  z-index: -1;
 }
 
 .timeline:nth-child(5) {
@@ -125,10 +126,10 @@ export default {
       font-size: $subheading-4-mobile;
     }
     &_cicle{
-          margin-bottom: 30%;
-          margin-top: 5%;
-        }
+      margin-top: 5%;
+      margin-bottom: 30%;
     }
+  }
 }
 
 
@@ -148,9 +149,9 @@ export default {
       font-size: $subheading-4;
     }
     &_cicle{
-          margin-bottom: 10%;
-          margin-top: 5%;
-        }
+      margin-top: 5%;
+      margin-bottom: 10%;
+    }
   }
 }
 
