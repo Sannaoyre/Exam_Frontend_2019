@@ -1,7 +1,4 @@
 //////////All buttons//////////
-button{
-  all: unset;
-}
 
 button:focus{
   outline: none;
@@ -41,6 +38,7 @@ button:focus{
 .dropdownButton{
   width: 100%;
   border: none;
+  margin-top: 2%;
   font-weight: 100;
   text-align: center;
   color: $primary-white;
@@ -50,7 +48,7 @@ button:focus{
   font-size: $subheading-2-mobile;
   border-bottom: 1px solid $primary-white;
 
-  &:hover .dropdownButton_title {
+  &:hover{
     opacity: 0.6;
   }
 }
@@ -59,10 +57,15 @@ button:focus{
   position: absolute;
   font-weight: 100;
   text-align: left;
+  padding-top: 5px;
   color: $primary-white;
   font-family: $text-font;
   font-size: $subheading-3-mobile;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
 }
+
+
 
 
 

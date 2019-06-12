@@ -16,7 +16,10 @@
 
                     <button v-on:click="hideFilms" class="[ dropdownButton ]" :id="film.id">About this project</button>
 
-                    <transition name="fade"><p v-if="film.show" class="[ dropdownText ]" v-text="film.description"></p></transition>
+                    <transition name="fade">
+                          <p v-if="film.show" class="[ dropdownText ]" v-text="film.description"></p>
+                    </transition>
+
 
                   </b-col>
                 </b-row>
@@ -209,7 +212,7 @@ iframe{
   display: block;
 }
 .film{
-  margin: 10% 0% 50% 0%;
+  margin: 15% 0% 50% 0%;
 }
 
 

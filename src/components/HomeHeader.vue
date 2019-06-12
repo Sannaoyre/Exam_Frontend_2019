@@ -3,7 +3,7 @@
       <div class="[ header_background ]">
 
           <div class="[ header_background-square ]">
-              <iframe src="https://player.vimeo.com/video/341665919/?&autoplay=1" height="100px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle" playsinline></iframe>
+              <iframe id="vid" src="https://player.vimeo.com/video/341665919/?&autoplay=1&muted=1" height="100px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle" playsinline muted></iframe>
               <img src="@/assets/iframe-replace-min.png" alt="Logo" class="replace-iframe">
           </div>
 
@@ -20,8 +20,15 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  methods: {
+    play(){
+      document.getElementById('vid').play();
+    }
+
+  }
 }
+
 </script>
 
 

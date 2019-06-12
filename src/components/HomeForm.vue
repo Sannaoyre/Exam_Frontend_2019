@@ -128,6 +128,9 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
 
-
+span{
+  position: absolute;
+  margin-left: 2%;
+}
 
 </style>

@@ -1,11 +1,11 @@
 .replace-iframe{
-  display: block;
+  display: none;
   height: 130%;
   transform: rotate(-45deg);
 }
 
 iframe {
-display: none;
+display: block;
 width: 600px;
 height: 400px;
 margin: 0 auto;

@@ -1,17 +1,18 @@
 <template>
  <div>
-     <nav v-on:scroll="handleScroll" >
+     <nav v-on:scroll="handleScroll"   >
        <div class="[ navigation ]">
-        <router-link to='/'><img src="@/assets/logo_white.png" alt="Logo for Markus" class="[ logo ]"></router-link>
+         <img src="@/assets/logo_white.png" alt="Logo for Markus" class="[ logo ]">
 
-          <div id="menuToggle" @click="open">
 
-            <input type="checkbox" v-if="visible" v-on-click-outside="close" />
+          <div id="menuToggle" >
+
+            <input type="checkbox"/>
+               <span ></span>
                <span></span>
                <span></span>
-               <span></span>
 
-             <section id="menu"  >
+             <section id="menu">
                 <router-link to="/">Home</router-link>
                 <router-link to="projects">Projects</router-link>
              </section>
@@ -30,7 +31,7 @@ export default {
   name: 'PageNavigation',
   data() {
       return {
-        visible: false }
+        visible: true }
     },
 
   methods: {

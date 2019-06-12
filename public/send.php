@@ -64,20 +64,32 @@ body{
 
 .successForm{
   background-color: #ebebec;
-  color: black;
-  width: 400px;
-	height: 400px;
+  width: 100%;
+	height: 100%;
 	position: absolute;
 	top:0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: auto;
+}
+
+p{
+  font-size: 18px;
+  color: black;
   text-align: center;
   font-family: 'Lato', 'Open sans', sans-serif;
 }
 
-
+@media screen and (min-width: 700px){
+  .successForm{
+    width: 60%;
+  	height: 40%;
+  }
+  p{
+    font-size: 22px;
+  }
+}
 
 </style>
 <body>
@@ -85,7 +97,7 @@ body{
 <div class="successForm">
   <h2><strong>Thank you so much for your request!</strong></h2>
   <p>I will get to you as soon as possible<br>Whish you a nice day!</p>
-  <img src="favicon.ico">
+  <img src="logo_black-01.png">
 <?= ($success)?"Success":"Failure"?>
 </div>
 
