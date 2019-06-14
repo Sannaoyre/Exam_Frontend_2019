@@ -104,7 +104,7 @@ export default {
    const emailExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/g;
     this.emailError = "";
     if(!emailExp.test(this.email)){
-      this.emailError ="Please fill in a valid email address";
+      this.emailError ="Please fill in a valid email address.";
       return false;
     } else {
       return true;

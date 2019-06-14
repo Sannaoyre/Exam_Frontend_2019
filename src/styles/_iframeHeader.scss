@@ -49,7 +49,6 @@ transform: rotate(-45deg);
           line-height: 0.5em;
           color: $primary-white;
           font-family: $header-font;
-
       }
     }
   }
@@ -58,6 +57,7 @@ transform: rotate(-45deg);
   .replace-iframe{
     display: none;
   }
+
   iframe {
   width: 1000px;
   height: 800px;
@@ -79,6 +79,8 @@ transform: rotate(-45deg);
    }
 }
 
+
+
 @media screen and (min-width: 1020px){
   .header{
       &_background{
@@ -96,8 +98,6 @@ transform: rotate(-45deg);
 
 @media screen and (min-width: 1200px){
   iframe {
-  margin-top: 100px;
-  margin-left: -100px;
   width: 1200px;
   height: 800px;
   margin: 0 auto;
@@ -122,7 +122,7 @@ transform: rotate(-45deg);
 }
 
 
-@media screen and (min-width: 1500px){
+@media screen and (min-width: 1800px){
   iframe {
   width: 1500px;
   margin: 0 auto;
@@ -131,12 +131,11 @@ transform: rotate(-45deg);
 
   .header{
       &_background{
-          height: 1000px;
 
           &-square{
             width: 500px;
             height: 500px;
-          }
+      }
     }
   }
 }

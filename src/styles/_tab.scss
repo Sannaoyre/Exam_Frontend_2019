@@ -20,8 +20,8 @@ ul{
 
       button{
         border: none;
-        font-size: 11px;
-        font-weight: 100;
+        font-size: 9px;
+        font-weight: 400;
         color: $primary-orange;
         text-transform: uppercase;
         font-family: $header-font;
@@ -64,6 +64,7 @@ ul{
       background-color: transparent;
 
       button{
+        font-weight: 100;
         color: $primary-white;
         font-size: $subheading-4-mobile;
 
@@ -80,15 +81,14 @@ ul{
 
       button{
         color: $primary-orange;
-      }
     }
   }
+}
 
 
 
 @media screen and (min-width: 900px){
   ul li button{
     font-size: $subheading-4;
-
   }
 }

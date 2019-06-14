@@ -12,7 +12,7 @@
 
                     <h2 v-text="film.title"  class="[ film_title ]" ></h2>
 
-                    <iframe :src="film.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle"></iframe>
+                    <iframe :src="film.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle" title="Film"></iframe>
 
                     <button v-on:click="hideFilms" class="[ dropdownButton ]" :id="film.id">About this project</button>
 
@@ -35,7 +35,7 @@
 
                   <h2 v-text="musicvideo.title"  class="[ film_title ]"></h2>
 
-                  <iframe :src="musicvideo.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle"></iframe>
+                  <iframe :src="musicvideo.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle" title="Film"></iframe>
 
                   <button v-on:click="hideMusicvideos" class="[ dropdownButton ]" :id="musicvideo.id">About this project</button>
 
@@ -56,7 +56,7 @@
 
                   <h2 v-text="shortfilm.title"  class="[ film_title ]"></h2>
 
-                  <iframe :src="shortfilm.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle"></iframe>
+                  <iframe :src="shortfilm.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle" title="Film"></iframe>
 
                   <button v-on:click="hideShortfilms" class="[ dropdownButton ]" :id="shortfilm.id">About this project</button>
 
@@ -77,11 +77,12 @@
 
                   <h2 v-text="graphic.title"  class="[ film_title ]"></h2>
 
-                  <iframe :src="graphic.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle"></iframe>
+                  <iframe :src="graphic.src" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle" title="Film"></iframe>
 
                   <button v-on:click="hideGraphics" class="[ dropdownButton ]" :id="graphic.id">About this project</button>
 
-                  <transition name="fade"><p v-if="graphic.show" class="[ dropdownText ]" v-text="graphic.description"></p></transition>
+                  <transition name="fade">
+                    <p v-if="graphic.show" class="[ dropdownText ]" v-text="graphic.description"></p></transition>
 
                 </b-col>
               </b-row>
@@ -92,6 +93,7 @@
         </tabs>
     </div>
 
+<!--////////Background-boxes////////-->
     <div class="[ gradient2BoxReverse ]"></div>
     <div  class="[ gradient2Box ]"></div>
     <div  class="[ blackBox ]"></div>

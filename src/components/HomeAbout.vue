@@ -50,11 +50,9 @@
                           <div><p class="[ skillbar_inner-text ]">Adobe Audition</p></div>
                         </div>
                     </div>
-
                   </div>
-
-                </b-col>
-          </b-row>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -62,18 +60,12 @@
 <script>
 export default {
   name: 'HomeAbout',
-
-
-
 }
-
 </script>
 
 
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
-
-
 
 img{
   width: 80%;
@@ -84,13 +76,13 @@ img{
 
 .about{
   &_text{
-    font-weight: 100;
+    font-weight: 400;
     color: $primary-white;
     font-family: $text-font;
     font-size: $subheading-4-mobile;
   }
   &_headline{
-    font-weight: 100;
+    font-weight: 400;
     color: $primary-white;
     font-family: $text-font;
     font-size: $subheading-3-mobile;
@@ -188,9 +180,15 @@ img{
   img{
     display: block;
   }
+  .about{
+    &_text{
+      font-weight: 100;
+    }
+    &_headline{
+      font-weight: 100;
+    }
+  }
 }
-
-
 
 @media screen and (min-width: 1200px){
   .about{

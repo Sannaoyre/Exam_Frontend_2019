@@ -21,11 +21,9 @@ export default {
     return { tabs: [] };
   },
 
-
   created() {
     this.tabs = this.$children ;
   },
-
 
   methods: {
     selectTab(selectedTab){

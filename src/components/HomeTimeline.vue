@@ -7,7 +7,7 @@
       </div>
 
       <b-container fluid>
-          <b-row  v-for="time in timeline" v-bind:key="time.id"  class="[ timeline ]">
+        <b-row  v-for="time in timeline" v-bind:key="time.id"  class="[ timeline ]">
 
                 <b-col cols="4" md="5" lg="5">
                     <div v-text="time.circle " class="[ timeline_cicle ]"></div>
@@ -18,12 +18,10 @@
                     <p v-text="time.title" class="[ timeline_title ]" v-scroll-reveal.reset="{ delay: 500 }"></p>
                     <p v-text="time.description" class="[ timeline_description ]" v-scroll-reveal.reset="{ delay: 700 }"></p>
                 </b-col>
-
-          </b-row>
+        </b-row>
       </b-container>
 
-    <div class="gradientBoxReverse">
-
+     <div class="gradientBoxReverse">
    </div>
   </div>
 </template>
@@ -47,7 +45,6 @@ export default {
     }
   }
 }
-
 
 </script>
 
@@ -80,15 +77,15 @@ export default {
     font-size: $subheading-4-mobile;
   }
   &_cicle{
-        width: 30px;
-        height: 30px;
-        float: right;
-        margin-top: 5%;
-        margin-bottom: 30%;
-        text-align: center;
-        border-radius: 100%;
-        background-color: $primary-black;
-        border: 5px solid $primary-orange;
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin-top: 5%;
+    margin-bottom: 30%;
+    text-align: center;
+    border-radius: 100%;
+    background-color: $primary-black;
+    border: 5px solid $primary-orange;
   }
 }
 

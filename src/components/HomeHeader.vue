@@ -3,8 +3,8 @@
       <div class="[ header_background ]">
 
           <div class="[ header_background-square ]">
-              <iframe id="vid" src="https://player.vimeo.com/video/341665919/?&autoplay=1&muted=1" height="100px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle" playsinline muted></iframe>
-              <img src="@/assets/iframe-replace-min.png" alt="Logo" class="replace-iframe">
+              <iframe id="vid" src="https://player.vimeo.com/video/341665919/?&autoplay=1&muted=1" height="100px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen align="middle" playsinline muted title="Film of logo animation"></iframe>
+              <!--<img src="@/assets/iframe-replace-min.png" alt="Logo" class="replace-iframe"> Image to use instead of film-->
           </div>
 
           <div class="[ header_background-text ]">
@@ -21,14 +21,7 @@
 <script>
 export default {
   name: 'HomeHeader',
-  methods: {
-    play(){
-      document.getElementById('vid').play();
-    }
-
-  }
 }
-
 </script>
 
 
@@ -36,8 +29,4 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
 @import '@/styles/_iframeHeader.scss';
-
-
-
-
 </style>

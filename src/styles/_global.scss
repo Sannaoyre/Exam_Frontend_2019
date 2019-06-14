@@ -73,10 +73,8 @@ p{
     display: block;
     background-image: linear-gradient(to bottom left, black 50%, #f26622 50%);
   }
-
-
-
 }
+
 
 
 @media screen and (min-width: 900px){
@@ -102,5 +100,16 @@ p{
   .blackBox{
     height: 100px;
     background-color: $primary-black;
+  }
+}
+
+
+@media screen and (min-width: 1800px){
+  .gradientBox{
+     height: 650px;
+  }
+
+  .gradient2BoxReverse{
+    height: 650px;
   }
 }

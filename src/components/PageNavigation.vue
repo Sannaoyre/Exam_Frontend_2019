@@ -1,18 +1,17 @@
 <template>
  <div>
-     <nav v-on:scroll="handleScroll"   >
+     <nav v-on:scroll="handleScroll">
        <div class="[ navigation ]">
-         <img src="@/assets/logo_white.png" alt="Logo for Markus" class="[ logo ]">
+        <router-link to="/" class="[ navigation_imagelink ]"><img src="@/assets/logo_white.png" alt="Logo for Markus" class="[ logo ]"></router-link>
 
+          <div id="menuToggle">
 
-          <div id="menuToggle" >
-
-            <input type="checkbox"/>
+            <input type="checkbox" id="checkbox" />
                <span ></span>
                <span></span>
                <span></span>
 
-             <section id="menu">
+             <section id="menu" >
                 <router-link to="/">Home</router-link>
                 <router-link to="projects">Projects</router-link>
              </section>
@@ -29,37 +28,41 @@
 
 export default {
   name: 'PageNavigation',
-  data() {
-      return {
-        visible: true }
-    },
 
   methods: {
+    handleClick(e){
+      var box = document.getElementById('checkbox');
+      if(e.target.id == "checkbox"){
+        return false
+      }
+      if(e.target.id != "menu" && box.checked == true){
+            box.checked = false;
+     }
 
+    },
+    
    handleScroll () {
       var e = document.getElementsByTagName('nav');
 
       if(window.scrollY <= 10){
-      //  console.log('I am at the top');
         e[0].classList.remove("navOnScroll");
       }
       else{
         e[0].classList.add("navOnScroll");
       }
     },
-
-      open() { this.visible = true },
-      close() { this.visible = false }
   },
+
 
    created () {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('click', this.handleClick);
   },
 
-  destroyed () {
+   destroyed () {
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('click', this.handleClick);
   }
-
 }
 
 </script>
@@ -71,5 +74,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
 
-
+.navigation_imagelink{
+  width: 5%;
+}
 </style>

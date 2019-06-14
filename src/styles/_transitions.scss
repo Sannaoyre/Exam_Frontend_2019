@@ -34,9 +34,8 @@
 
 
 
-/*//////SKILLBAR//////*/
 
-/*//////Mobile and Ipad//////*/
+/*////// SKILLBAR - Mobile and Ipad//////*/
 @keyframes progressAnimation {
   0%   { width: 55%; background-color: #fc8759;}
   100% { width: 100%; background-color: $primary-orange; }
@@ -61,7 +60,7 @@
 
 
 
-/*//////Ipad Pro//////*/
+/*//////SKILLBAR - Ipad Pro//////*/
 @media screen and (min-width: 1020px){
   @keyframes progressAnimation {
     0%   { width: 100%; background-color: $primary-orange;}
@@ -87,7 +86,7 @@
 
 
 
-/*//////Desktop and larger//////*/
+/*//////SKILLBAR - Desktop and larger//////*/
 @media screen and (min-width: 1200px){
   @keyframes progressAnimation {
     0%   { width: 50%; background-color: #fc8759;}
